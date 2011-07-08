@@ -29,9 +29,8 @@
 	</div>
 	<div id="top_right">
 	<?php
-		if(!isloggedin()){
-			echo $vars['area1'];
-			//echo elgg_view('custom_index/options');
+		if (!isloggedin()) {
+			echo elgg_view("account/forms/login");
 			echo "<div class=\"clearfloat\"></div>";
 		}else{
 	?>
