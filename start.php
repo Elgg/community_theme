@@ -1,18 +1,11 @@
 <?php
-
-    /**
-     * Elgg Community Header
-     **/
+/**
+ * Elgg Community Theme
+ */
      
-     /**
-	 * Initialise
-	 *
-	 */
-	function theme_elggCommunityHeader_init(){
+register_elgg_event_handler('init', 'system', 'community_theme_init');
+
+function community_theme_init() {
 	
-    }
+}
 	
-	// Initialise log browser
-	register_elgg_event_handler('init','system','theme_elggCommunityHeader_init');
-	
-?>

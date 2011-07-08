@@ -1,7 +1,12 @@
 <?php
-	//a login area which plugins can extend
-	//we use fbconnect in area one, openid in area two and twitter in area three
-	//each of those plugins must make sure they extend the correct area
+/**
+ * Login options
+ *
+ *	a login area which plugins can extend
+ *	we use fbconnect in area one, openid in area two and twitter in area three
+ *	each of those plugins must make sure they extend the correct area
+ *
+ */
 ?>
 <div id="login_options" style="margin:0 0 4px 0;width:240px;">
 <!-- twitter -->
