@@ -296,13 +296,30 @@ div#preloadimages {
 /*-----------------------------
 	GLOBAL HEADER #00acf7
 -----------------------------*/
-#globalheader_wrapper {background-color:#00acf7; width: 100%;height: 60px;margin-left: auto;margin-right: auto;}
+#globalheader_wrapper {background-color:#00acf7; width: 100%;height: 30px;margin-left: auto;margin-right: auto; margin-bottom: 10px;}
 #globalheader {position:relative;width: 970px;margin-left: auto;margin-right: auto;}
 #globalheader ul  {float:right; margin: 5px 0 0 0px;}
-#globalheader li  {display:inline;list-style-type:none;padding: 0 0 0 30px;}
+#globalheader ul {
+    font-size: 100%;
+	line-height: 125%;
+	font-family: Arial,sans-serif;
+}
+#globalheader li  {display:inline;list-style-type:none;padding: 0 0 0 15px;}
+#globalheader li a {
+    border-radius: 10px 10px 10px 10px;
+    padding: 2px 9px;
+}
+#globalheader li a:hover {
+    background-color: #027BB3;
+    color: white;
+}
+.header.selected {
+    background-color: white;
+    color: #333333;
+    font-weight: normal;
+}
 .header {color: #f1f1f1;}
 .header:hover {color:black;text-decoration: none;}
-.header.selected {color: white; font-weight: bold;}
 
 #supportbanner {
 	height:26px;
