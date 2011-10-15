@@ -293,6 +293,15 @@ div#preloadimages {
 	text-decoration: none;
 }
 
+#elgg_topbar_container_right .community_login {
+    background: transparent;
+    color: #EEEEEE;
+    display: block;
+    height: 20px;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+
 /*-----------------------------
 	GLOBAL HEADER #00acf7
 -----------------------------*/
