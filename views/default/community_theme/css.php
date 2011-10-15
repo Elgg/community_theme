@@ -77,7 +77,7 @@
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join.gif) no-repeat left top;
 }
 #top_left .homepage_join_link a:hover {
-	/* background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join_over.gif) no-repeat left top; */
+	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join_over.gif) no-repeat left top;
 }
 #left_box, #centre_box, #right_box {
 	float:left;
@@ -141,7 +141,7 @@
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more.gif) no-repeat left top;
 }
 .homepage_more_link a:hover {
-	/* background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more_over.gif) no-repeat left top; */
+	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more_over.gif) no-repeat left top;
 }
 
 

@@ -71,6 +71,6 @@
 
 <!-- preload rollovers -->
 <div id="preloadimages">
-	<img src="<?php echo $vars['url']; ?>mod/custom_index/graphics/homepage_more_over.gif" alt="more graphic" />
-	<img src="<?php echo $vars['url']; ?>mod/custom_index/graphics/homepage_join_over.gif" alt="join graphic" />
+	<img src="<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more_over.gif" alt="more graphic" />
+	<img src="<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join_over.gif" alt="join graphic" />
 </div>
