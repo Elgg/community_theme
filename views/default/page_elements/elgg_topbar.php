@@ -9,6 +9,10 @@
  */
 ?>
 
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-eehqhBKhIOEx-.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+
 <?php
 
 if (isloggedin()) {
