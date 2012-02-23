@@ -11,6 +11,10 @@ function community_theme_init() {
 	elgg_extend_view('css/elgg', 'community_theme/css');
 
 	elgg_register_plugin_hook_handler('index', 'system', 'community_theme_front_page');
+	
+	elgg_unregister_menu_item('site', 'bookmarks');
+	elgg_unregister_menu_item('site', 'members');
+	elgg_unregister_menu_item('site', 'pages');
 }
 
 /**
