@@ -13,7 +13,7 @@
 	 */
 
 ?>
-<div class="elgg-grid mtl">
+<div class="elgg-grid mvl">
 	<div class="elgg-col elgg-col-3of4">
 		<div id="top_left">
 			<h1><span>elgg</span>Community</h1>
@@ -32,8 +32,7 @@
 	<div class="elgg-col elgg-col-1of4">
 	<?php
 		if (!elgg_is_logged_in()) {
-			echo elgg_view("account/forms/login");
-			echo "<div class=\"clearfloat\"></div>";
+			echo elgg_view_module('aside', 'Login', elgg_view_form('login'));
 		} else {
 	?>
 		<div class="homepage_stats">
@@ -45,7 +44,7 @@
 	?>
 	</div>
 </div>
-<div class="elgg-grid mtl">
+<div class="elgg-grid mvl">
 	<div class="elgg-col elgg-col-1of3">
 		<?php echo elgg_view_module('community', 'Plugins', elgg_view('community_theme/modules/plugins'), array(
 			'class' => 'elgg-module-community-plugins',

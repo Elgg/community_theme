@@ -278,7 +278,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-#globalheader ul  {float:right; margin: 5px 0 0 0px;}
+#globalheader ul  {float:right; margin: 7px 0 0 0px;}
 #globalheader ul {
     font-size: 100%;
 	line-height: 125%;
@@ -347,5 +347,10 @@
 	padding: 1px;
 	margin:3px;
 	cursor: pointer;
+}
+
+.elgg-form-register {
+	float: left;
+	width: 50%;
 }
 /* end PC IE rules */
