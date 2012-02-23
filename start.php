@@ -9,8 +9,6 @@ elgg_register_event_handler('init', 'system', 'community_theme_init');
 function community_theme_init() {
 
 	elgg_extend_view('css/elgg', 'community_theme/css');
-	// TODO(evan): Replace with a plugin
-	elgg_extend_view('page/elements/foot', 'js/community_theme/analytics');
 	elgg_extend_view('page/elements/head', 'community_theme/favicon');
 
 	elgg_register_plugin_hook_handler('index', 'system', 'community_theme_front_page');
