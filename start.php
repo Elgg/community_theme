@@ -1,17 +1,19 @@
 <?php
 /**
  * Elgg Community Theme
+ * 
  */
      
-register_elgg_event_handler('init', 'system', 'community_theme_init');
+elgg_register_event_handler('init', 'system', 'community_theme_init');
 
 function community_theme_init() {
 
-	elgg_extend_view('css', 'community_theme/css');
-	elgg_extend_view('footer/analytics', 'js/community_theme/analytics');
-	elgg_extend_view('metatags', 'community_theme/favicon');
+	elgg_extend_view('css/elgg', 'community_theme/css');
+	// TODO(evan): Replace with a plugin
+	elgg_extend_view('page/elements/foot', 'js/community_theme/analytics');
+	elgg_extend_view('page/elements/head', 'community_theme/favicon');
 
-	register_plugin_hook('index', 'system', 'community_theme_front_page');
+	elgg_register_plugin_hook_handler('index', 'system', 'community_theme_front_page');
 }
 
 /**
@@ -24,16 +26,16 @@ function community_theme_init() {
  * @return bool
  */
 function community_theme_front_page($hook, $type, $return, $params) {
-		if ($return == true) {
-			// another hook has already replaced the front page
-			return $return;
-		}
+	if ($return == true) {
+		// another hook has already replaced the front page
+		return $return;
+	}
 
-		$body = elgg_view_layout('front_page');
+	$body = elgg_view_layout('front_page');
 
-		page_draw('', $body);
+	echo elgg_view_page('', $body);
 
-		// return true to signify that we have handled the front page
-		return true;
+	// return true to signify that we have handled the front page
+	return true;
 }
 	

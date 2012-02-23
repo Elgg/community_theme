@@ -10,9 +10,6 @@
  */
 ?>
 
-#custom_index {
-	margin:10px;
-}
 #index_spotlight #top_left h1 span {
 	font-weight:bold;
 }
@@ -28,29 +25,24 @@
 	font-size:1.8em;
 }
 #top_left {
-	float:left;
 	position: relative;
-	width:640px;
 	min-height: 240px;
-	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
-	border:1px solid silver;
-	margin:0 30px 20px 0;
-	padding:5px 10px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	border: 1px solid silver;
+	margin-right: 30px;
+	padding: 5px 10px;
 	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_spotlight_image.gif) no-repeat right center;
-}
-#top_right {
-	float:left;
-	width:200px;
 }
 
 /* IE 6 fix */
 * html #top_left {
-	height:240px;
+	height: 240px;
 }
 /* IE 7 fix */
 *:first-child+html #top_left {
-	height:240px;
+	height: 240px;
 }
 
 #top_right .homepage_stats h2 {
@@ -63,92 +55,83 @@
 	border:1px solid silver;
 	padding:5px 10px;
 	min-height: 240px;
-	width:212px;
 	background: #FDFFC3;
 }
 
-#top_left .homepage_join_link a {
+#top_left .homepage_join_link {
 	display:block;
 	position: absolute;
-	bottom:10px;
-	left:10px;
-	width:213px;
-	height:37px;
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join.gif) no-repeat left top;
+	bottom: 10px;
+	left: 10px;
+	width: 213px;
+	height: 37px;
+	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join.gif) no-repeat left top;
 }
-#top_left .homepage_join_link a:hover {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join_over.gif) no-repeat left top;
+#top_left .homepage_join_link:hover {
+	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join_over.gif) no-repeat left top;
 }
-#left_box, #centre_box, #right_box {
-	float:left;
-	width:275px;
+
+.elgg-module-community {
 	border:1px solid silver;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
-	margin:0 19px 0 0;
-	padding:10px;
-	height:280px;
+	margin: 0 10px;
+	padding: 10px;
+	height: 280px;
 	position: relative;
 }
-#index_boxes h2 {
-	color:#0054A7;
-}
 
-
-
-#left_box {
+.elgg-module-community-plugins {
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_plugins.gif) no-repeat bottom center;
+	margin-left: 0;
 }
 
-#centre_box {
+.elgg-module-community-discussion {
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_groups.gif) no-repeat bottom center;
 }
-#right_box {
-	margin-right:0px;
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_box.gif) no-repeat bottom center;
 
+.elgg-module-community-more {
+	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_box.gif) no-repeat bottom center;
+	margin-right: 0;
 }
 
-#right_box ul {
+.elgg-module-community-more ul {
 	margin:0;
 	padding:0;
 	list-style: none;
 }
 
-#right_box li {
+.elgg-module-community-more li {
 	padding:0px 0 10px 55px;
 	margin:0;
 }
-#right_box li.bug_tracker {
+.elgg-module-community-more .bug_tracker {
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_bullet_bug_tracker.gif) no-repeat left top;
 }
-#right_box li.mailing_list {
+.elgg-module-community-more .mailing_list {
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_bullet_mailing_list.gif) no-repeat left top;
 }
-#right_box li.api_reference {
+.elgg-module-community-more .api_reference {
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_bullet_api_reference.gif) no-repeat left top;
 }
-#right_box li.chat {
+.elgg-module-community-more .chat {
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_bullet_chat.gif) no-repeat left top;
 }
-.homepage_more_link a {
-	display:block;
+
+.homepage_more_link {
+	display: block;
 	position: absolute;
-	bottom:10px;
-	right:10px;
-	width:68px;
-	height:22px;
+	overflow: hidden;
+	bottom: 10px;
+	right: 10px;
+	width: 68px;
+	height: 22px;
+	text-indent: 9999em;
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more.gif) no-repeat left top;
 }
-.homepage_more_link a:hover {
+
+.homepage_more_link:hover {
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more_over.gif) no-repeat left top;
-}
-
-
-div#preloadimages {
-	width: 0px;
-	height: 0px;
-	overflow: hidden;
 }
 
 #persistent_login {
@@ -166,28 +149,6 @@ div#preloadimages {
 	margin:0;
 	padding:5px 0 4px 0;
 }
-
-#page_container {
-	margin:0;
-	padding:0;
-}
-
-#layout_header {
-	text-align:left;
-	width:100%;
-	height:98px;
-}
-#wrapper_header {
-	margin:0;
-	padding:0;
-	position:relative;
-}
-
-#layout_canvas {
-	margin-top:0;
-}
-
-
 
 #wrapper_header #logo {
 	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/elgg.org.logo.gif) no-repeat left top;
@@ -305,8 +266,18 @@ div#preloadimages {
 /*-----------------------------
 	GLOBAL HEADER #00acf7
 -----------------------------*/
-#globalheader_wrapper {background-color:#00acf7; width: 100%;height: 30px;margin-left: auto;margin-right: auto; margin-bottom: 10px;}
-#globalheader {position:relative;width: 970px;margin-left: auto;margin-right: auto;}
+#globalheader_wrapper {
+	background-color:#00acf7; 
+	width: 100%;
+	height: 30px;
+	margin: 0 auto;
+}
+#globalheader {
+	position:relative;
+	width: 970px;
+	margin-left: auto;
+	margin-right: auto;
+}
 #globalheader ul  {float:right; margin: 5px 0 0 0px;}
 #globalheader ul {
     font-size: 100%;
@@ -317,6 +288,7 @@ div#preloadimages {
 #globalheader li a {
     border-radius: 10px 10px 10px 10px;
     padding: 2px 9px;
+    text-decoration: none;
 }
 #globalheader li a:hover {
     background-color: #027BB3;
