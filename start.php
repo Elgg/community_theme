@@ -9,7 +9,6 @@ elgg_register_event_handler('init', 'system', 'community_theme_init');
 function community_theme_init() {
 
 	elgg_extend_view('css/elgg', 'community_theme/css');
-	elgg_extend_view('page/elements/head', 'community_theme/favicon');
 
 	elgg_register_plugin_hook_handler('index', 'system', 'community_theme_front_page');
 }
