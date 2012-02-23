@@ -1,29 +1,9 @@
 <?php
 /**
- * Custom Index page css extender
- *
- * @package custom_index
- * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
- * @author Curverider <info@elgg.com>
- * @copyright Curverider Ltd 2008-2009
- * @link http://elgg.org/
+ * Community Theme css extensions
  */
 ?>
 
-#index_spotlight #top_left h1 span {
-	font-weight:bold;
-}
-#index_spotlight #top_left h1 {
-	color:#666666;
-	font-family:Arial,sans-serif;
-	font-size:2.8em;
-	font-weight:normal;
-}
-#index_spotlight #top_left h2 {
-	color:#999999;
-	font-weight:normal;
-	font-size:1.8em;
-}
 #top_left {
 	position: relative;
 	min-height: 240px;
@@ -44,6 +24,24 @@
 *:first-child+html #top_left {
 	height: 240px;
 }
+
+#top_left h1 {
+	color:#666666;
+	font-family:Arial,sans-serif;
+	font-size:2.8em;
+	font-weight:normal;
+}
+
+#top_left h1 span {
+	font-weight:bold;
+}
+
+#top_left h2 {
+	color:#999999;
+	font-weight:normal;
+	font-size:1.8em;
+}
+
 
 #top_right .homepage_stats h2 {
 	color:#0054A7;
@@ -140,127 +138,10 @@
 	margin-top:-34px;
 }
 
-#login-box {
-	min-height:241px;
-}
-
 #openid_login #login-boxs form {
 	background: none;
 	margin:0;
 	padding:5px 0 4px 0;
-}
-
-#wrapper_header #logo {
-	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/elgg.org.logo.gif) no-repeat left top;
-	height:68px;
-	margin:0pt;
-	padding:0pt;
-	width:125px;
-}
-#wrapper_header {
-
-}
-#wrapper_header #menu {
-	height:30px;
-	margin:0pt auto;
-	padding:0pt;
-	text-align:left;
-}
-
-#menu-inner {
-	width:998px;
-	text-align:right;
-	margin:0 auto;
-	padding:0;
-}
-#menu-inner a span { cursor: pointer; }
-#menu a:active { outline: none; }
-#menu a:focus { -moz-outline-style: none; }
-
-#menu a {
-	float:right;
-	margin:0;
-	padding:0 0 0 10px;
-	text-decoration:none;
-	font-weight: bold;
-	font-size: 110%;
-	line-height:1.6em;
-}
-#menu a span {
-	float:left;
-	display:block;
-	padding:3px 14px 0px 3px;
-	height:27px;
-	margin:0;
-	color:#ffffff;
-}
-#menu a.disabled span {
-	color:#547faa;
-}
-#menu a.disabled {
-	color:#547faa;
-}
-#menu a.disabled:hover {
-	color:#547faa;
-}
-#menu a.disabled:hover span {
-	color:#547faa;
-}
-
-/* IE 6 &amp; 7 fix */
-* html #menu a span  {
-	height:30px;
-}
-
-#menu a:hover span {
-	color:#00487d;
-}
-#menu a:hover {
-	color:#00487d;
-}
-
-#menu a.selected {
-	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/community_tab_left_selected.gif) no-repeat left top;
-}
-#menu a.selected span {
-	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/community_tab_right_selected.gif) no-repeat right top;
-	color:#00487d;
-}
-
-#submenu {
-	/* margin:7px 5px 0 5px; */
-	height:30px;
-	padding-top:4px;
-	padding-left:7px;
-}
-#submenu a {
-	font-size:1.1em;
-	font-weight:bold;
-	margin:0 5px 0 0;
-	padding:3px 10px 3px 10px;
-	float:left;
-	display:block;
-	height:20px;
-}
-#submenu a.selected {
-	color:#62b3f8;
-	background:white;
-	-moz-border-radius-topleft:4px;
-	-moz-border-radius-topright:4px;
-	-webkit-border-top-left-radius:4px;
-	-webkit-border-top-right-radius:4px;
-}
-#submenu a:hover {
-	text-decoration: none;
-}
-
-#elgg_topbar_container_right .community_login {
-    background: transparent;
-    color: #EEEEEE;
-    display: block;
-    height: 20px;
-    margin: 0 5px 0 0;
-    padding: 0;
 }
 
 /*-----------------------------
