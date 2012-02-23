@@ -34,12 +34,7 @@
 		if (!elgg_is_logged_in()) {
 			echo elgg_view_module('aside', 'Login', elgg_view_form('login'));
 		} else {
-	?>
-		<div class="homepage_stats">
-			<h2>Welcome</h2>
-			<p>Welcome to this community which has been set up for users of Elgg to support each other.</p>
-		</div>
-	<?php
+			echo elgg_view_module('aside', 'Welcome', '<p>Welcome to this community which has been set up for users of Elgg to support each other.</p>');
 		}
 	?>
 	</div>

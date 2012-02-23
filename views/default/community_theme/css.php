@@ -30,6 +30,7 @@
 	font-family:Arial,sans-serif;
 	font-size:2.8em;
 	font-weight:normal;
+	line-height: 1.4em;
 }
 
 #top_left h1 span {
