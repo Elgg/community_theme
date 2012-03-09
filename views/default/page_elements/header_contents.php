@@ -18,6 +18,32 @@
 
 <div id="layout_header">
 <div id="wrapper_header">
+	<div id="promotion">
+		<?php
+			$now = new DateTime();
+			$event = new DateTime('2012-03-24');
+			$interval = $now->diff($event);
+			$day_count = $interval->format('%a');
+			$discount = rand(0, 1);
+			$days = ($day_count == 1) ? 'day' : 'days';
+			
+			$url = 'http://elggcampsf.eventbrite.com';
+			$text = 'Register now for ECSF!';
+			if ($discount) {
+				$url .= '?discount=ElggCommunity';
+				$text = 'Receive a discount when you register for ECSF!';
+			}
+
+			$link = elgg_view('output/url', array(
+				'href' => $url,
+				'text' => $text
+			));
+
+			echo "<h2>$link</h2>";
+			echo "Only $day_count $days left to register  <a href=\"http://elggcampsf.org\">ElggCamp San Francisco!</a>";
+		?>
+	</div>
+	
 	<div id="logo"><a href="<?php echo $vars['url']; ?>"><img src="<?php echo $vars['url']; ?>_graphics/spacer.gif" border="0" width="125" height="68" alt="spacer graphic" /></a></div>
 <?php
 

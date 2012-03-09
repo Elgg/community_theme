@@ -377,3 +377,32 @@ div#preloadimages {
 	cursor: pointer;
 }
 /* end PC IE rules */
+
+#promotion h2 {
+	font: 150%/1.4 "Lucida Grande", Verdana, sans-serif;
+}
+
+#promotion {
+	color: #0054A7;
+	font: 100%/1.4 "Lucida Grande", Verdana, sans-serif;
+	
+	display: block;
+	width: 432px;
+	height: 45px;
+	border: 1px solid #aaa;
+	float: left;
+	margin-left: 500px;
+	background-color: #fff;
+	padding: 10px;
+
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+
+	box-shadow: 0 0 3px 3px #ccc;
+	-moz-box-shadow: 0 0 3px 3px #ccc;
+	-webkit-box-shadow: 0 0 3px 3px #ccc;
+	-o-border-radius: 0 0 3px 3px #ccc;
+	
+}
