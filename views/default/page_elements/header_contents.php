@@ -40,7 +40,7 @@
 			));
 
 			echo "<h2>$link</h2>";
-			echo "Only $day_count $days left to register  <a href=\"http://elggcampsf.org\">ElggCamp San Francisco!</a>";
+			echo "Only $day_count $days left to register for <a href=\"http://elggcampsf.org\">ElggCamp San Francisco!</a>";
 		?>
 	</div>
 	
