@@ -196,6 +196,10 @@ div#preloadimages {
 	padding:0pt;
 	width:125px;
 }
+#logo > a > img {
+    margin-top: -70px;
+}
+
 #wrapper_header {
 
 }
