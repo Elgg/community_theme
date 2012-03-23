@@ -21,26 +21,28 @@
 	<div id="promotion">
 		<?php
 			$now = new DateTime();
-			$event = new DateTime('2012-03-24');
-			$interval = $now->diff($event);
-			$day_count = $interval->format('%a');
-			$discount = rand(0, 1);
-			$days = ($day_count == 1) ? 'day' : 'days';
-			
-			$url = 'http://elggcampsf.eventbrite.com';
-			$text = 'Register now for ECSF!';
-			if ($discount) {
-				$url .= '?discount=ElggCommunity';
-				$text = 'Receive a discount when you register for ECSF!';
+			$event = new DateTime('2012-03-25');
+			if ($now < $event) {
+				$interval = $now->diff($event);
+				$day_count = $interval->format('%a');
+				$discount = rand(0, 1);
+				$days = ($day_count == 1) ? 'day' : 'days';
+				
+				$url = 'http://elggcampsf.eventbrite.com';
+				$text = 'Register now for ECSF!';
+				if ($discount) {
+					$url .= '?discount=ElggCommunity';
+					$text = 'Receive a discount when you register for ECSF!';
+				}
+
+				$link = elgg_view('output/url', array(
+					'href' => $url,
+					'text' => $text
+				));
+
+				echo "<h2>$link</h2>";
+				echo "Only $day_count $days left to register for <a href=\"http://elggcampsf.org\">ElggCamp San Francisco!</a>";
 			}
-
-			$link = elgg_view('output/url', array(
-				'href' => $url,
-				'text' => $text
-			));
-
-			echo "<h2>$link</h2>";
-			echo "Only $day_count $days left to register for <a href=\"http://elggcampsf.org\">ElggCamp San Francisco!</a>";
 		?>
 	</div>
 	
