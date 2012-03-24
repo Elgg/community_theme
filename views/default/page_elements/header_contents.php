@@ -18,8 +18,8 @@
 
 <div id="layout_header">
 <div id="wrapper_header">
+		<?php /*
 	<div id="promotion">
-		<?php
 			$now = new DateTime();
 			$event = new DateTime('2012-03-25');
 			if ($now < $event) {
@@ -43,8 +43,8 @@
 				echo "<h2>$link</h2>";
 				echo "Only $day_count $days left to register for <a href=\"http://elggcampsf.org\">ElggCamp San Francisco!</a>";
 			}
-		?>
 	</div>
+		*/ ?>
 	
 	<div id="logo"><a href="<?php echo $vars['url']; ?>"><img src="<?php echo $vars['url']; ?>_graphics/spacer.gif" border="0" width="125" height="68" alt="spacer graphic" /></a></div>
 <?php
