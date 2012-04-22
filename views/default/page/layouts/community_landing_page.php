@@ -1,16 +1,7 @@
 <?php
-
-	/**
-	 * Elgg custom profile
-	 * You can edit the layout of this page with your own layout and style. Whatever you put in the file
-	 * will replace the frontpage of your Elgg site.
-	 *
-	 * @package Elgg
-	 * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
-	 * @author Curverider Ltd
-	 * @copyright Curverider Ltd 2008
-	 * @link http://elgg.org/
-	 */
+/**
+ * Front page layout
+ */
 
 ?>
 <div class="elgg-grid mvl">
