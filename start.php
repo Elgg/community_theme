@@ -13,7 +13,7 @@ function community_theme_init() {
 
 	elgg_register_plugin_hook_handler('index', 'system', 'community_theme_front_page');
 	
-	elgg_unregister_menu_item('site', 'anypage');
+	elgg_unregister_menu_item('site', 'bookmarks');
 	elgg_unregister_menu_item('site', 'members');
 	elgg_unregister_menu_item('site', 'pages');
 
@@ -76,7 +76,7 @@ function community_theme_init() {
 	$items = array(
 		'activity' => 'Activity',
 		'blogs' => 'Blogs',
-		'anypage' => 'Bookmarks',
+		'bookmarks' => 'Bookmarks',
 		'groups' => 'Groups',
 		'the_wire' => 'The Wire',
 		'messages' => 'Messages',

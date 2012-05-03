@@ -18,7 +18,13 @@ $gfx = elgg_normalize_url('mod/community_theme/graphics');
 /*****
 Common
 *****/
+body {
+	background-color: black;
+}
 
+.elgg-page-body {
+	background-color: white;
+}
 
 /*****
 Footer
@@ -127,7 +133,7 @@ Dot org landing
 *******/
 
 .elgg-page-dotorg-landing > .elgg-page-header {
-	background: url(<?php echo $gfx;?>/header_bk.jpg) repeat-x scroll left top transparent;
+	background: url(<?php echo $gfx;?>/header_bk.jpg) repeat-x scroll left top white;
 }
 
 .elgg-page-dotorg-landing > .elgg-page-header > .elgg-inner {
