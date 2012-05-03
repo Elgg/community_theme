@@ -10,24 +10,6 @@ $body = 'Providing you with the tools you need to build socially aware applicati
 $blurb = elgg_view_module('featured', $title, $body);
 
 // downloads
-$href = elgg_view('output/url', array(
-	'text' => '<h2>Download</h2>Elgg 1.7',
-	'href' => 'elgg.org/download.php',
-	'class' => 'elgg-button elgg-button-featured',
-	'is_trusted' => true
-));
-$item = new ElggMenuItem('1.7', $href, false);
-elgg_register_menu_item('dotorg_downloads', $item);
-
-$href = elgg_view('output/url', array(
-	'text' => '<h2>Download</h2>Elgg 1.8',
-	'href' => 'elgg.org/download.php',
-	'class' => 'elgg-button elgg-button-featured',
-	'is_trusted' => true
-));
-$item = new ElggMenuItem('1.8', $href, false);
-elgg_register_menu_item('dotorg_downloads', $item);
-
 $downloads = elgg_view_menu('dotorg_downloads', array('class' => 'elgg-menu-hz'));
 ?>
 

@@ -214,22 +214,22 @@ Dot org landing
 	background: none;
 }
 
-.elgg-menu-footer-default {
+.elgg-menu-footer-navigation {
 	float: left;
 }
 
-.elgg-menu-footer > li {
+.elgg-menu-footer-navigation > li {
 	display: block;
 	padding: 0 0 0 14px;
 	background: url("<?php echo $gfx; ?>/bullets.gif") no-repeat scroll left center transparent;
 	font-size: 12px;
 }
 
-.elgg-menu-footer > li, .elgg-menu-footer > li > a {
+.elgg-page-footer .elgg-menu > li, .elgg-page-footer .elgg-menu > li > a {
 	color: white;
 }
 
-.elgg-menu-footer > li:after {
+.elgg-menu-footer-navigation > li:after {
 	content: none;
 	padding: 0;
 }

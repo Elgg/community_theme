@@ -34,50 +34,12 @@ $right_modules = array(
 
 <?php
 
-$items = array(
-	'activity' => 'Activity',
-	'blogs' => 'Blogs',
-	'bookmarks' => 'Bookmarks',
-	'groups' => 'Groups',
-	'the_wire' => 'The Wire',
-	'messages' => 'Messages',
-);
-
-foreach ($items as $id => $text) {
-//	$href = elgg_normalize_url("features/$id");
-	$href = false;
-	$img = elgg_normalize_url("mod/community_theme/graphics/$id.png");
-	$text = "<img src=\"$img\" /><br />$text";
-	$item = new ElggMenuItem($id, $text, $href);
-	$item->setContext('dotorg');
-	elgg_register_menu_item('dotorg_features', $item);
-}
-
 $features = elgg_view_menu('dotorg_features', array(
 	'class' => 'elgg-menu-hz elgg-dotorg-slider',
 	'sort_by' => 'register'
 ));
 
 echo elgg_view_module('featured', 'Features', $features, array('class' => 'clearfloat'));
-
-
-
-$items = array(
-	'wiley' => array('Wiley Publishing', 'wiley.com'),
-	'oxfam' => array('oxFam', 'oxfam.com'),
-	'uf' => array('University of Florida', 'uf.edu'),
-	'australia' => array('Australian Government', 'au.gov.au'),
-);
-
-foreach ($items as $id => $info) {
-	list($text, $href) = $info;
-	$img = elgg_normalize_url("mod/community_theme/graphics/$id.jpg");
-	$text = "<img alt=\"$text\" src=\"$img\" />";
-	
-	$item = new ElggMenuItem($id, $text, $href);
-	$item->setContext('dotorg');
-	elgg_register_menu_item('dotorg_users', $item);
-}
 
 $users = elgg_view_menu('dotorg_users', array(
 	'class' => 'elgg-menu-hz elgg-dotorg-slider',

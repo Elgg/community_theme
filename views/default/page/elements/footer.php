@@ -4,32 +4,21 @@
  *
  */
 
-$items = array(
-	'home' => array('Home', 'elgg.org'),
-	'community' => array('Community', 'community.elgg.org'),
-	'blog' => array('Blog', 'blog.elgg.org'),
-	'hosting' => array('Hosting', 'elgg.org/hosting.php'),
-	'services' => array('Services', 'elgg.org/services'),
-	'docs' => array('Docs', 'docs.elgg.org'),
-);
-
-foreach ($items as $id => $info) {
-	list($text, $href) = $info;
-	$item = new ElggMenuItem($id, $text, $href);
-	elgg_register_menu_item('footer', $item);
-}
-
-$links = elgg_view_menu('footer', array(
+$nav = elgg_view_menu('footer_navigation', array(
 	'sort_by' => 'register',
-	'class' => 'elgg-menu-hz',
-	'show_section_headers' => true
+	'show_section_headers' => true,
+	'section' => 'default'
+));
+
+$footer = elgg_view_menu('footer', array(
+	'class' => 'elgg-menu-hz float-alt ptl'
 ));
 
 ?>
 
 <div class="elgg-col elgg-col-3of5">
 	<div class="elgg-col elgg-col-1of2">
-		<?php echo $links; ?>
+		<?php echo $nav; ?>
 	</div>
 	<div class="elgg-col elgg-col-1of2">
 		<h2>Contact</h2>
@@ -43,4 +32,5 @@ $links = elgg_view_menu('footer', array(
 		Elgg is a registered trademark of Thematic Networks.<br />
 		Domain policy link.<br />
 	</span>
+	<?php echo $footer; ?>
 </div>
