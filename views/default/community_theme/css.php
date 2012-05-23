@@ -125,6 +125,8 @@ landing banner
 .elgg-banner-scroller {
 	top: 175px;
 	position: absolute;
+	cursor: pointer;
+	z-index: 10;
 }
 
 
@@ -134,20 +136,21 @@ Dot org landing
 
 .elgg-page-dotorg-landing > .elgg-page-header {
 	background: url(<?php echo $gfx;?>/header_bk.jpg) repeat-x scroll left top white;
+	border-bottom: 2px solid #BEBEBE;
 }
 
 .elgg-page-dotorg-landing > .elgg-page-header > .elgg-inner {
-	height: 411px;
+	height: 365px;
 }
 
 .elgg-page-dotorg-landing > .elgg-page-header > .elgg-inner > h1 {
-	top: 29px;
+	top: 10px;
 	left: 70px;
 	position: absolute;
 }
 
 .elgg-banner {
-	padding: 110px 24px 24px 24px;
+	padding: 75px 24px 24px 24px;
     overflow: hidden;
     position: relative;
 	margin: auto;
@@ -163,13 +166,21 @@ Dot org landing
 	width: 500px;
 }
 
+.elgg-banner img.elgg-screenshot {
+	margin-right: 42px;
+	box-shadow: 0 0 25px #666666;
+}
+
 /****
  Menus
  ***/
 
 .elgg-menu-dotorg-downloads {
-	padding-left: 42px;
+	padding: 20px 0 0 42px;
 	text-align: center;
+	position: absolute;
+	top: 248px;
+	z-index: 10;
 }
 
 .elgg-menu-dotorg-downloads > li {

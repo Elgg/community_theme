@@ -7,9 +7,16 @@
 elgg_register_event_handler('init', 'system', 'community_theme_init');
 
 function community_theme_init() {
-
 	elgg_extend_view('css/elgg', 'community_theme/css');
-	elgg_extend_view('page/elements/head', 'community_theme/ie_mode_metatag');
+	elgg_register_js('jquery.coda_slider', elgg_get_site_url() . 'mod/community_theme/vendor/jquery.coda_slider/javascripts/jquery.coda-slider-2.0.js');
+
+	elgg_register_simplecache_view('css/coda_slider');
+	$url = elgg_get_simplecache_url('css', 'coda_slider');
+	elgg_register_css('jquery.coda_slider', $url);
+
+	elgg_register_simplecache_view('js/dotorg');
+	$url = elgg_get_simplecache_url('js', 'dotorg');
+	elgg_register_js('elgg.dotorg', $url);
 
 	elgg_register_plugin_hook_handler('index', 'system', 'community_theme_front_page');
 	
@@ -141,6 +148,9 @@ function community_theme_front_page($hook, $type, $return, $params) {
 		case 'elgg.org':
 		default:
 			elgg_push_context('dotorg');
+			elgg_load_js('jquery.coda_slider');
+			elgg_load_css('jquery.coda_slider');
+			elgg_load_js('elgg.dotorg');
 
 			$body = elgg_view_menu('dotorg_site', array(
 				'class' => 'elgg-menu-hz',

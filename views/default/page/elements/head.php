@@ -3,6 +3,8 @@
  * The standard HTML head
  *
  * @uses $vars['title'] The page title
+ *
+ * Have to extend this for the X-AU-Compatible. It has to be first.
  */
 
 // Set title
