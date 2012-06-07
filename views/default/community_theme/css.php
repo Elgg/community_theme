@@ -58,8 +58,15 @@ Community
 
 .elgg-page-default .elgg-page-header > .elgg-inner {
 	height: 105px;
+    padding-top:5px;
 }
 
+/*****
+Group 
+*****/
+.elgg-module-group  > .elgg-body{
+	padding:5px;
+ }
 /*****
 Dot org
 *****/
