@@ -62,6 +62,12 @@ Community
 }
 
 /*****
+Group 
+*****/
+.elgg-module-group  > .elgg-body{
+	padding:5px;
+ }
+/*****
 Dot org
 *****/
 
