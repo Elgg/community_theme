@@ -58,6 +58,7 @@ Community
 
 .elgg-page-default .elgg-page-header > .elgg-inner {
 	height: 105px;
+    padding-top:5px;
 }
 
 /*****
