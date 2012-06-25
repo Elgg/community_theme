@@ -138,7 +138,7 @@ function community_theme_front_page($hook, $type, $return, $params) {
 	switch ($site) {
 		case 'community.elgg.org':
 			elgg_push_context('community');
-			$body = elgg_view_layout('community_front_page');
+			$body = elgg_view_layout('community_landing_page');
 			$title = 'Elgg Community Site';
 			echo elgg_view_page($title, $body);
 			break;
