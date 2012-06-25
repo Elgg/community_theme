@@ -4,7 +4,7 @@
  */
 
 ?>
-<div class="elgg-grid mvl">
+<div class="elgg-grid pvl">
 	<div class="elgg-col elgg-col-3of4">
 		<div id="top_left">
 			<h1><span>elgg</span>Community</h1>
