@@ -300,12 +300,6 @@ sidebar
 }
 
 
-
-
-
-<?php return true; ?>
-
-
 #top_left {
 	position: relative;
 	min-height: 240px;
