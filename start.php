@@ -155,13 +155,9 @@ function community_theme_front_page($hook, $type, $return, $params) {
 	$site = 'community.elgg.org';
 	switch ($site) {
 		case 'community.elgg.org':
-			// TODO(evan): This is temporary until we have time to redo the front page.
-			//forward('/activity');
-			
 			elgg_push_context('community');
 			$body = elgg_view_layout('community_landing_page');
-			$title = 'Elgg Community Site';
-			echo elgg_view_page($title, $body);
+			echo elgg_view_page('', $body);
 			break;
 
 		case 'elgg-master.mbp':
