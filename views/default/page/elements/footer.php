@@ -28,9 +28,9 @@ $footer = elgg_view_menu('footer', array(
 <div class="elgg-col elgg-col-2of5">
 	<span class="float-alt">
 	<h2>Legal</h2>
-		&copy;2011 the Elgg Foundation<br />
+		&copy;2012 the Elgg Foundation<br />
 		Elgg is a registered trademark of Thematic Networks.<br />
-		Domain policy link.<br />
+		<a href="http://elgg.org/domain.php">Domain policy</a>.<br />
 	</span>
 	<?php echo $footer; ?>
 </div>

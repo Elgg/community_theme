@@ -66,7 +66,7 @@ function community_theme_init() {
 		'community' => array('Community', 'community.elgg.org'),
 		'blog' => array('Blog', 'blog.elgg.org'),
 		'hosting' => array('Hosting', 'elgg.org/hosting.php'),
-		'services' => array('Services', 'elgg.org/services'),
+		'services' => array('Services', 'elgg.org/services.php'),
 		'docs' => array('Docs', 'docs.elgg.org'),
 	);
 
