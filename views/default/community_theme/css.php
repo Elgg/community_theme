@@ -12,7 +12,7 @@
  * 
  */
 
-$gfx = elgg_normalize_url('mod/community_theme/graphics');
+$gfx = elgg_normalize_url('mod/community_theme/graphics/www_elgg_org');
 ?>
 
 /*****
@@ -60,177 +60,6 @@ Community
 	height: 105px;
 }
 
-/*****
-Dot org
-*****/
-
-/*****
-featured module
-******/
-
-.elgg-module-featured {
-	border: 0px;
-}
-
-.elgg-module-featured > .elgg-head {
-	background-color: white;
-}
-
-.elgg-module-featured > .elgg-head > h3 {
-	color: #0054A7;
-	font-size: 18px;
-	line-height: 20px;
-}
-
-.elgg-module-featured > .elgg-body {
-	padding: 5px;
-	font-face: Arial,Helvetica,sans-serif,"Franklin Gothic Medium";
-	font-style: italic;
-	color: #666666;
-	font-size: 14px;
-	line-height: 16px;
-}
-
-/*****
-landing banner
-******/
-
-.elgg-banner .elgg-module-featured {
-	border: 0px;
-	margin: 28px 0 0 42px;
-	min-height: 145px;
-}
-
-.elgg-banner .elgg-module-featured > .elgg-head {
-	background-color: transparent;
-	padding-left: 0px;
-}
-
-.elgg-banner .elgg-module-featured > .elgg-head > h3 {
-	color: white;
-	font-size: 24px;
-	line-height: 25px;
-	margin-bottom: 8px;
-}
-
-.elgg-banner .elgg-module-featured > .elgg-body {
-	padding: 5px 5px 5px 0;
-	font-weight: bold;
-	font-style: normal;
-	font-size: 20px;
-	line-height: 21px;
-	color: #0A285A;
-}
-
-.elgg-banner-scroller {
-	top: 175px;
-	position: absolute;
-	cursor: pointer;
-	z-index: 10;
-}
-
-
-/******
-Dot org landing
-*******/
-
-.elgg-page-dotorg-landing > .elgg-page-header {
-	background: url(<?php echo $gfx;?>/header_bk.jpg) repeat-x scroll left top white;
-	border-bottom: 2px solid #BEBEBE;
-}
-
-.elgg-page-dotorg-landing > .elgg-page-header > .elgg-inner {
-	height: 365px;
-}
-
-.elgg-page-dotorg-landing > .elgg-page-header > .elgg-inner > h1 {
-	top: 10px;
-	left: 70px;
-	position: absolute;
-}
-
-.elgg-banner {
-	padding: 75px 24px 24px 24px;
-    overflow: hidden;
-    position: relative;
-	margin: auto;
-}
-
-.elgg-banner-blurb {
-	width: 442px;
-	text-align: left;
-}
-
-.elgg-banner-screenshots {
-	text-align: right;
-	width: 500px;
-}
-
-.elgg-banner img.elgg-screenshot {
-	margin-right: 42px;
-	box-shadow: 0 0 25px #666666;
-}
-
-/****
- Menus
- ***/
-
-.elgg-menu-dotorg-downloads {
-	padding: 20px 0 0 42px;
-	text-align: center;
-	position: absolute;
-	top: 248px;
-	z-index: 10;
-}
-
-.elgg-menu-dotorg-downloads > li {
-	margin: 0 15px;
-}
-
-.elgg-menu-dotorg-site {
-	background-color: #0054A7;
-	overflow: hidden;
-	padding-left: 40px;
-}
-
-.elgg-menu-dotorg-site > li {
-	background: url(<?php echo $gfx;?>/nav_border-right.jpg) no-repeat scroll right top transparent;
-	font-size: 20px;
-	font-weight: normal;
-	margin: 8px 0;
-	padding: 23px 24px;
-}
-
-.elgg-menu-dotorg-site > li > a {
-	color: white;
-	font-weight: bold;
-}
-
-.elgg-menu-dotorg-site > li:last-child {
-	background: none;
-}
-
-.elgg-dotorg-slider {
-	background-color: #eeeeee;
-	overflow: hidden;
-	border-top: 1px solid #bebebe;
-	border-bottom: 1px solid #bebebe;
-	text-align: center;
-	font-style: normal;
-	font-weight: bold;
-	color: #666666;
-	width: 100%;
-}
-
-.elgg-dotorg-slider > li {
-	padding: 10px 24px;
-	background: url(<?php echo $gfx;?>/slider-content-border.jpg) no-repeat scroll right top transparent;
-}
-
-.elgg-dotorg-slider > li:last-child {
-	background: none;
-}
-
 .elgg-menu-footer-navigation {
 	float: left;
 }
@@ -249,46 +78,6 @@ Dot org landing
 .elgg-menu-footer-navigation > li:after {
 	content: none;
 	padding: 0;
-}
-
-
-/****
- Download buttons
- ***/
-
-.elgg-button.elgg-button-featured {
-	padding: 12px 8px 8px;
-	margin: 10px 0 0;
-	border: 0;
-	box-shadow: none;
-	background: url(<?php echo $gfx; ?>/orng_btn.png) no-repeat scroll center 4px transparent;
-	width: 152px;
-	height: 60px;
-	color: #5F200D;
-	font-size: 14px;
-	line-height: 14px;
-}
-
-.elgg-button.elgg-button-featured h2 {
-	color: white;
-	font-size: 22px;
-	line-height: 20px;
-}
-
-.elgg-button.elgg-button-featured:hover {
-	text-decoration: none;
-}
-
-.elgg-page-dotorg > .elgg-page-body {
-	background-color: #eeeeee;
-}
-
-.elgg-page-dotorg > .elgg-page-body > .elgg-inner {
-	background-color: white;
-}
-
-.elgg-page-dotorg > .elgg-page-body > .elgg-inner .elgg-main {
-	padding: 15px;
 }
 
 /****
@@ -499,7 +288,10 @@ sidebar
 
 
 
-/* PC IE 6&amp;7 */
+/*
+PC IE 6 & 7
+@todo what is this?
+*/
 * html #cse-search-box {
 
 }
