@@ -12,7 +12,7 @@
  * 
  */
 
-$gfx = elgg_normalize_url('mod/community_theme/graphics/www_elgg_org');
+$gfx = elgg_normalize_url('mod/community_theme/graphics/');
 ?>
 
 /*****
@@ -51,11 +51,6 @@ Footer
 	background: url(<?php echo $gfx; ?>/silver_border_h.gif) no-repeat scroll left bottom transparent
 }
 
-
-/****
-Community
-*****/
-
 .elgg-page-default .elgg-page-header > .elgg-inner {
 	height: 105px;
 }
@@ -80,14 +75,9 @@ Community
 	padding: 0;
 }
 
-/****
-sidebar
-*****/
-
-.elgg-page-dotorg .elgg-sidebar > h2 {
-	xbackground-color: white;
-}
-
+/*
+@todo The top_left stuff needs cleaned up.
+*/
 
 #top_left {
 	position: relative;
@@ -218,109 +208,13 @@ sidebar
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more_over.gif) no-repeat left top;
 }
 
-#persistent_login {
-	float:right;
-	display:block;
-	margin-top:-34px;
-}
-
 #openid_login #login-boxs form {
 	background: none;
 	margin:0;
 	padding:5px 0 4px 0;
 }
 
-/*-----------------------------
-	GLOBAL HEADER #00acf7
------------------------------*/
-#globalheader_wrapper {
-	background-color:#00acf7; 
-	width: 100%;
-	height: 30px;
-	margin: 0 auto;
-}
-#globalheader {
-	position:relative;
-	width: 970px;
-	margin-left: auto;
-	margin-right: auto;
-}
-#globalheader ul  {float:right; margin: 7px 0 0 0px;}
-#globalheader ul {
-    font-size: 100%;
-	line-height: 125%;
-	font-family: Arial,sans-serif;
-}
-#globalheader li  {display:inline;list-style-type:none;padding: 0 0 0 15px;}
-#globalheader li a {
-    border-radius: 10px 10px 10px 10px;
-    padding: 2px 9px;
-    text-decoration: none;
-}
-#globalheader li a:hover {
-    background-color: #027BB3;
-    color: white;
-}
-.header.selected {
-    background-color: white;
-    color: #333333;
-    font-weight: normal;
-}
-.header {color: #f1f1f1;}
-.header:hover {color:black;text-decoration: none;}
-
-#supportbanner {
-	height:26px;
-	color:white;
-	background:black;
-	text-align:center;
-	width:100%;
-	padding-top:4px;
-}
-#supportbanner a {
-	color:white;
-	text-decoration:underline;
-}
-#supportbanner a:hover {
-	color:#e74815;
-	text-decoration:underline;
-}
-
-
-
-/*
-PC IE 6 & 7
-@todo what is this?
-*/
-* html #cse-search-box {
-
-}
-* html #cse-search-box input {
-	height:25px;
-	background-image: none !important;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border:3px solid white;
-	padding:0;
-	margin:3px;
-}
-* html #cse-search-box input.gsearchsubmit {
-	font: 13px/100% Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	color: white;
-	background:#547faa;
-	border: 3px solid #547faa;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	width: auto;
-	height: 25px;
-	padding: 1px;
-	margin:3px;
-	cursor: pointer;
-}
-
 .elgg-form-register {
 	float: left;
 	width: 50%;
 }
-/* end PC IE rules */
