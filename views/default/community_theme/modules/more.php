@@ -1,4 +1,9 @@
-<p>Contribute to Elgg. Open source works best as a community.</p>
+<?php
+
+echo elgg_echo('community_theme:more');
+
+?>
+
 <ul>
 	<li class="bug_tracker"><b>Bug tracker</b><br /><a href="https://github.com/Elgg/Elgg/issues">Github</a></li>
 	<li class="mailing_list"><b>Mailing list and IRC</b><br /><a href="http://groups.google.com/group/elgg-development/">For developers</a> also <a href="http://webchat.freenode.net/?channels=#elgg">#Elgg on Freenode.net.</a></li>

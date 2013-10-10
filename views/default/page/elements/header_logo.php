@@ -13,6 +13,6 @@ $src = elgg_normalize_url("mod/community_theme/graphics/logo.png");
 
 <h1>
 	<a class="elgg-heading-site" href="<?php echo $site_url; ?>">
-		<img src="<?php echo $src; ?>" width="144" height="76" />
+		<img src="<?php echo $src; ?>" width="100" height="53" />
 	</a>
 </h1>

@@ -17,20 +17,18 @@ $footer = elgg_view_menu('footer', array(
 ?>
 
 <div class="elgg-col elgg-col-3of5">
-	<div class="elgg-col elgg-col-1of2">
+	<div class="elgg-col elgg-col-2of5">
 		<?php echo $nav; ?>
 	</div>
-	<div class="elgg-col elgg-col-1of2">
-		<h2>Contact</h2>
+	<div class="elgg-col elgg-col-2of5">
+		<h2><?php echo elgg_echo('community_theme:title:contact'); ?></h2>
 		<p>info at elgg dot org</p>
 	</div>
 </div>
 <div class="elgg-col elgg-col-2of5">
-	<span class="float-alt">
-	<h2>Legal</h2>
-		&copy;2012 the Elgg Foundation<br />
-		Elgg is a registered trademark of Thematic Networks.<br />
-		<a href="http://elgg.org/domain.php">Domain policy</a>.<br />
-	</span>
+	<h2><?php echo elgg_echo('community_theme:title:legal'); ?></h2>
+	<p><?php echo elgg_echo('community_theme:copyright'); ?></p>
+	<p><?php echo elgg_echo('community_theme:trademark'); ?></p>
+	<p><a href="http://elgg.org/domain.php"><?php echo elgg_echo('community_theme:policy'); ?></a>.</p>	
 	<?php echo $footer; ?>
 </div>
