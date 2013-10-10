@@ -19,162 +19,141 @@ $gfx = elgg_normalize_url('mod/community_theme/graphics/');
 Common
 *****/
 body {
-	background-color: black;
+	background-color: #1B1B1B;
 }
 
 .elgg-page-body {
 	background-color: white;
 }
-
-/*****
-Footer
-******/
-.elgg-page-default .elgg-page-footer {
-	background-color: black;
-	border-top: 2px solid #bebebe;
-	width: 100%;
-	color: white;
-}
-
-.elgg-page-default .elgg-page-footer > .elgg-inner {
-	border: 0;
-	margin-top: 12px;
-	margin-bottom: 12px;
-}
-
-.elgg-page-default .elgg-page-footer h2 {
-	color: #4690D6;
-	font-size: 14px;
-	padding-bottom: 12px;
-	margin-bottom: 12px;
-	font-weight: normal;
-	background: url(<?php echo $gfx; ?>/silver_border_h.gif) no-repeat scroll left bottom transparent
-}
-
 .elgg-page-default .elgg-page-header > .elgg-inner {
 	height: 105px;
 }
 
+/* ***************************************
+	Front page
+*************************************** */
+.elgg-front-page-featured {
+	display: block;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/featured.jpg) center top no-repeat;
+}
+.elgg-front-page-featured > .elgg-inner {
+	width: 990px;
+	margin: 0 auto;
+}
+#top_left {
+	position: relative;
+	top: 140px;
+	margin-right: 50px;
+	padding: 0;
+}
+#top_left h1 {
+	font-family: "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
+	color: #FFFFFF;
+	font-size: 3.2em;
+	font-weight: normal;
+	padding-bottom: 30px;
+}
+#top_left h1 span {
+	font-weight:bold;
+}
+#top_left h2 {
+	color: #999999;
+	font-weight: normal;
+	font-size: 1.8em;
+}
+#top_right {
+	position: relative;
+	float: right;
+	top: 140px;
+	width: 100%;
+}
+.elgg-front-page-featured ul li {	
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+.elgg-front-page-featured ul li a {
+	display: block;	
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 24px;
+	background: #64BEF2;
+	border-radius: 5px;
+	padding: 15px 0;
+}
+.elgg-front-page-featured ul li a:hover {
+	background: #74C5F4;
+}
+	
+/* ***************************************
+	Footer
+*************************************** */
+.elgg-page-default .elgg-page-footer {
+	background-color: #1B1B1B;
+	width: 100%;
+}
+.elgg-page-default .elgg-page-footer a {
+	color: #999;
+}
+.elgg-page-default .elgg-page-footer > .elgg-inner {
+	border: 0;
+	padding: 20px 0;
+}
+.elgg-page-default .elgg-page-footer h2 {
+	color: #999;
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+	font-weight: normal;
+	border-bottom: 1px solid #444;
+}
+.elgg-page-footer .elgg-col-3of5 .elgg-col-2of5 {
+	padding-right: 10%;
+}
 .elgg-menu-footer-navigation {
 	float: left;
 }
 
 .elgg-menu-footer-navigation > li {
 	display: block;
-	padding: 0 0 0 14px;
+	padding: 0 0 2px 14px;
 	background: url("<?php echo $gfx; ?>/bullets.gif") no-repeat scroll left center transparent;
-	font-size: 12px;
 }
-
-.elgg-page-footer .elgg-menu > li, .elgg-page-footer .elgg-menu > li > a {
-	color: white;
-}
-
 .elgg-menu-footer-navigation > li:after {
 	content: none;
 	padding: 0;
 }
-
-/*
-@todo The top_left stuff needs cleaned up.
-*/
-
-#top_left {
-	position: relative;
-	min-height: 240px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	border: 1px solid silver;
-	margin-right: 30px;
-	padding: 5px 10px;
-	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_spotlight_image.gif) no-repeat right center;
-}
-
-/* IE 6 fix */
-* html #top_left {
-	height: 240px;
-}
-/* IE 7 fix */
-*:first-child+html #top_left {
-	height: 240px;
-}
-
-#top_left h1 {
-	color:#666666;
-	font-family:Arial,sans-serif;
-	font-size:2.8em;
-	font-weight:normal;
-	line-height: 1.4em;
-}
-
-#top_left h1 span {
-	font-weight:bold;
-}
-
-#top_left h2 {
-	color:#999999;
-	font-weight:normal;
-	font-size:1.8em;
-}
-
-
-#top_right .homepage_stats h2 {
-	color:#0054A7;
-	margin-bottom:15px;
-}
-#top_right .homepage_stats {
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border:1px solid silver;
-	padding:5px 10px;
-	min-height: 240px;
-	background: #FDFFC3;
-}
-
-#top_left .homepage_join_link {
-	display:block;
-	position: absolute;
-	bottom: 10px;
-	left: 10px;
-	width: 213px;
-	height: 37px;
-	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join.gif) no-repeat left top;
-}
-#top_left .homepage_join_link:hover {
-	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join_over.gif) no-repeat left top;
-}
-
+/* ***************************************
+	Modules
+*************************************** */
 .elgg-module-community {
-	border:1px solid silver;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	margin: 0 10px;
-	padding: 10px;
-	height: 280px;
+	background: #EEEEEE;
+	border: 1px solid #DDDDDD;
+	border-radius: 6px;
+	margin: 15px;
+	padding: 20px;
+	min-height: 280px;
 	position: relative;
 }
-
-.elgg-module-community-plugins {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_plugins.gif) no-repeat bottom center;
+.elgg-module-community .elgg-head {
+	padding-bottom: 10px;
+}
+.elgg-module-community h3 {
+	font-size: 24px;
+	color: #222222;
+}
+.elgg-module-community-plugins {	
 	margin-left: 0;
 }
-
-.elgg-module-community-discussion {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_groups.gif) no-repeat bottom center;
-}
-
 .elgg-module-community-more {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_box.gif) no-repeat bottom center;
 	margin-right: 0;
 }
-
 .elgg-module-community-more ul {
 	margin:0;
-	padding:0;
+	padding: 10px 0 0;
 	list-style: none;
 }
-
 .elgg-module-community-more li {
 	padding:0px 0 10px 55px;
 	margin:0;
@@ -191,29 +170,31 @@ Footer
 .elgg-module-community-more .chat {
 	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_bullet_chat.gif) no-repeat left top;
 }
-
+/* ***************************************
+	Buttons
+*************************************** */
 .homepage_more_link {
-	display: block;
 	position: absolute;
-	overflow: hidden;
-	bottom: 10px;
-	right: 10px;
-	width: 68px;
-	height: 22px;
-	text-indent: 9999em;
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more.gif) no-repeat left top;
+	display: block;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 24px;
+	background: #64BEF2;
+	border-radius: 5px;
+	padding: 15px 0;
 }
-
 .homepage_more_link:hover {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more_over.gif) no-repeat left top;
+	color: #FFFFFF;
+	background: #74C5F4;
 }
-
 #openid_login #login-boxs form {
 	background: none;
 	margin:0;
 	padding:5px 0 4px 0;
 }
-
 .elgg-form-register {
 	float: left;
 	width: 50%;
