@@ -32,7 +32,6 @@ Footer
 .elgg-page-default .elgg-page-footer {
 	background-color: black;
 	border-top: 2px solid #bebebe;
-	width: 100%;
 	color: white;
 }
 
@@ -52,7 +51,7 @@ Footer
 }
 
 .elgg-page-default .elgg-page-header > .elgg-inner {
-	height: 105px;
+	height: 80px;
 }
 
 .elgg-menu-footer-navigation {
