@@ -51,7 +51,11 @@ Footer
 }
 
 .elgg-page-default .elgg-page-header > .elgg-inner {
-	height: 80px;
+	height: 70px;
+}
+
+.elgg-page-header > .elgg-inner h1 {
+	padding-top: 0;<?php /* Aalborg theme adds 10px padding for narrow view */ ?>
 }
 
 .elgg-menu-footer-navigation {

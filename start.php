@@ -41,6 +41,9 @@ function community_theme_init() {
 		'docs' => array('Docs', 'docs.elgg.org'),
 	);
 
+	//remove "Powered by Elgg" link
+	elgg_unregister_menu_item('footer', 'powered');
+
 	foreach ($items as $id => $info) {
 		list($text, $href) = $info;
 		$item = new ElggMenuItem($id, $text, $href);
