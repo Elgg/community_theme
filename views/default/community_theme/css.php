@@ -32,7 +32,6 @@ Footer
 .elgg-page-default .elgg-page-footer {
 	background-color: black;
 	border-top: 2px solid #bebebe;
-	width: 100%;
 	color: white;
 }
 
@@ -52,7 +51,11 @@ Footer
 }
 
 .elgg-page-default .elgg-page-header > .elgg-inner {
-	height: 105px;
+	height: 70px;
+}
+
+.elgg-page-header > .elgg-inner h1 {
+	padding-top: 0;<?php /* Aalborg theme adds 10px padding for narrow view */ ?>
 }
 
 .elgg-menu-footer-navigation {
@@ -88,7 +91,7 @@ Footer
 	border: 1px solid silver;
 	margin-right: 30px;
 	padding: 5px 10px;
-	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_spotlight_image.gif) no-repeat right center;
+	background: url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_spotlight_image.gif) no-repeat right center;
 }
 
 /* IE 6 fix */
@@ -139,10 +142,10 @@ Footer
 	left: 10px;
 	width: 213px;
 	height: 37px;
-	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join.gif) no-repeat left top;
+	background: url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_join.gif) no-repeat left top;
 }
 #top_left .homepage_join_link:hover {
-	background: url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_join_over.gif) no-repeat left top;
+	background: url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_join_over.gif) no-repeat left top;
 }
 
 .elgg-module-community {
@@ -156,16 +159,16 @@ Footer
 }
 
 .elgg-module-community-plugins {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_plugins.gif) no-repeat bottom center;
+	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_plugins.gif) no-repeat bottom center;
 	margin-left: 0;
 }
 
 .elgg-module-community-discussion {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_groups.gif) no-repeat bottom center;
+	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_groups.gif) no-repeat bottom center;
 }
 
 .elgg-module-community-more {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_box.gif) no-repeat bottom center;
+	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_box.gif) no-repeat bottom center;
 	margin-right: 0;
 }
 
@@ -180,16 +183,16 @@ Footer
 	margin:0;
 }
 .elgg-module-community-more .bug_tracker {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_bullet_bug_tracker.gif) no-repeat left top;
+	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_bullet_bug_tracker.gif) no-repeat left top;
 }
 .elgg-module-community-more .mailing_list {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_bullet_mailing_list.gif) no-repeat left top;
+	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_bullet_mailing_list.gif) no-repeat left top;
 }
 .elgg-module-community-more .api_reference {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_bullet_api_reference.gif) no-repeat left top;
+	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_bullet_api_reference.gif) no-repeat left top;
 }
 .elgg-module-community-more .chat {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_bullet_chat.gif) no-repeat left top;
+	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_bullet_chat.gif) no-repeat left top;
 }
 
 .homepage_more_link {
@@ -201,11 +204,11 @@ Footer
 	width: 68px;
 	height: 22px;
 	text-indent: 9999em;
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more.gif) no-repeat left top;
+	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_more.gif) no-repeat left top;
 }
 
 .homepage_more_link:hover {
-	background:url(<?php echo $vars['url']; ?>mod/community_theme/graphics/homepage_more_over.gif) no-repeat left top;
+	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_more_over.gif) no-repeat left top;
 }
 
 #openid_login #login-boxs form {
