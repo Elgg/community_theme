@@ -8,8 +8,8 @@ elgg_register_event_handler('init', 'system', 'community_theme_init');
 
 function community_theme_init() {
 	elgg_extend_view('css/elgg', 'community_theme/css');
-
-	elgg_register_plugin_hook_handler('index', 'system', 'community_theme_front_page');
+	
+	elgg_register_page_handler('', 'community_theme_front_page');
 	
 	elgg_unregister_menu_item('site', 'bookmarks');
 	elgg_unregister_menu_item('site', 'members');
@@ -60,15 +60,10 @@ function community_theme_init() {
  * @param array $params
  * @return bool
  */
-function community_theme_front_page($hook, $type, $return, $params) {
-	if ($return == true) {
-		// another hook has already replaced the front page
-		return $return;
+function community_theme_front_page() {
+	if (!include_once(dirname(__FILE__) . "/index.php")) {
+		return false;
 	}
 
-	elgg_push_context('community');
-	$body = elgg_view_layout('community_landing_page');
-	echo elgg_view_page('', $body);
-	
 	return true;
 }
