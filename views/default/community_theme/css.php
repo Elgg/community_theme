@@ -14,68 +14,60 @@
 
 $gfx = elgg_normalize_url('mod/community_theme/graphics/');
 ?>
+/* <style> /**/
 
 /*****
 Common
 *****/
 body {
-	background-color: black;
+	background-color: #161C20;
 }
 
 .elgg-page-body {
 	background-color: white;
 }
+.elgg-page-footer {
+	padding: 0;
+}
 
-/*****
-Footer
-******/
+/* ***************************************
+	Footer
+*************************************** */
 .elgg-page-default .elgg-page-footer {
-	background-color: black;
-	border-top: 2px solid #bebebe;
-	color: white;
+	color: #415561;
+	background-color: #161C20;
 }
-
+.elgg-page-default .elgg-page-footer a {
+	color: #415561;
+}
 .elgg-page-default .elgg-page-footer > .elgg-inner {
+	max-width: 1030px;
+	margin: 0 auto;	
+	padding: 30px 0 0;
 	border: 0;
-	margin-top: 12px;
-	margin-bottom: 12px;
 }
-
 .elgg-page-default .elgg-page-footer h2 {
-	color: #4690D6;
-	font-size: 14px;
+	color: #415561;
 	padding-bottom: 12px;
 	margin-bottom: 12px;
 	font-weight: normal;
-	background: url(<?php echo $gfx; ?>/silver_border_h.gif) no-repeat scroll left bottom transparent
+	border-bottom: 1px solid #374751;
 }
-
-.elgg-page-default .elgg-page-header > .elgg-inner {
-	height: 70px;
+.elgg-page-footer .elgg-module {
+	margin: 10px 20px 20px;
 }
-
-.elgg-page-header > .elgg-inner h1 {
-	padding-top: 0;<?php /* Aalborg theme adds 10px padding for narrow view */ ?>
-}
-
 .elgg-menu-footer-navigation {
-	float: left;
+	padding-left: 15px;
+	list-style: disc outside none;
 }
-
-.elgg-menu-footer-navigation > li {
-	display: block;
-	padding: 0 0 0 14px;
-	background: url("<?php echo $gfx; ?>/bullets.gif") no-repeat scroll left center transparent;
-	font-size: 12px;
+.elgg-menu-footer > li:before {
+	color: #415561;
 }
-
-.elgg-page-footer .elgg-menu > li, .elgg-page-footer .elgg-menu > li > a {
-	color: white;
+.elgg-menu-footer-default {
+	padding-right: 20px;
 }
-
-.elgg-menu-footer-navigation > li:after {
-	content: none;
-	padding: 0;
+.elgg-menu-footer-meta {
+	padding-left: 20px;
 }
 
 /*
@@ -220,4 +212,13 @@ Footer
 .elgg-form-register {
 	float: left;
 	width: 50%;
+}
+/* ***************************************
+	Responsive
+*************************************** */
+@media (max-width: 820px) {
+	.elgg-menu-footer-meta,
+	.elgg-menu-footer-default {
+		padding: 0 20px;
+	}
 }
