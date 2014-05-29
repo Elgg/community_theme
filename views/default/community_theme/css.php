@@ -29,7 +29,12 @@ body {
 .elgg-page-footer {
 	padding: 0;
 }
-
+.elgg-page-default .elgg-page-header > .elgg-inner {
+	height: 70px;
+}
+.elgg-page-header > .elgg-inner h1 {
+	padding-top: 0; <?php /* Aalborg theme adds 10px padding for narrow view */ ?>
+}
 /* ***************************************
 	Footer
 *************************************** */
