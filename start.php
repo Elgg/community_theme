@@ -8,7 +8,8 @@ elgg_register_event_handler('init', 'system', 'community_theme_init');
 
 function community_theme_init() {
 	elgg_extend_view('css/elgg', 'community_theme/css');
-	
+
+	elgg_register_plugin_hook_handler('head', 'page', 'community_theme_setup_head');	
 	elgg_register_page_handler('', 'community_theme_front_page');
 	
 	elgg_unregister_menu_item('site', 'bookmarks');
@@ -49,6 +50,33 @@ function community_theme_init() {
 		$item = new ElggMenuItem($id, $text, $href);
 		elgg_register_menu_item('footer_navigation', $item);
 	}
+}
+
+/**
+ * Register items for the html head
+ *
+ * @param string $hook Hook name ('head')
+ * @param string $type Hook type ('page')
+ * @param array  $data Array of items for head
+ * @return array
+ */
+function community_theme_setup_head($hook, $type, $data) {
+	$data['metas'][] = array(
+		'http-equiv' => 'X-UA-Compatible',
+		'content' => 'IE=edge',
+	);
+	
+	$data['metas'][] = array(
+		'name' => 'viewport',
+		'content' => 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0',
+	);
+	
+	$data['links'][] = array(
+		'rel' => 'icon',
+		'href' => elgg_normalize_url('mod/community_theme/graphics/favicon.ico'),
+	);
+
+	return $data;
 }
 
 /**
