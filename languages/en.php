@@ -16,6 +16,7 @@ return array(
 	'community_theme:policy'		=> 'Domain policy',
 	'community_theme:title:contact'	=> 'Contact',
 	'community_theme:title:legal'	=> 'Legal',
+	'community_theme:title:register'	=> 'Welcome to the Elgg Community!',
 	'community_theme:trademark'		=> 'Elgg is a registered trademark of Thematic Networks.',
 
 );

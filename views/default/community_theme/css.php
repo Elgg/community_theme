@@ -214,14 +214,30 @@ body {
 	padding:5px 0 4px 0;
 }
 
-.elgg-form-register {
+.elgg-form-account {
 	float: left;
 	width: 50%;
+}
+.elgg-module-register {
+	float: right;
+	width: 45%;
+}
+.elgg-module-register .elgg-head {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
 }
 /* ***************************************
 	Responsive
 *************************************** */
 @media (max-width: 820px) {
+	.elgg-form-account {
+		max-width: 100%;
+        width: 100%;
+    }
+    .elgg-module-register {
+        width: 100%;
+		margin-top: 20px;
+    }
 	.elgg-menu-footer-meta,
 	.elgg-menu-footer-default {
 		padding: 0 20px;
