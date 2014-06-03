@@ -88,7 +88,6 @@ body {
 	border: 1px solid silver;
 	margin-right: 30px;
 	padding: 5px 10px;
-	background: url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_spotlight_image.gif) no-repeat right center;
 }
 
 /* IE 6 fix */
