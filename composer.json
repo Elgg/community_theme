@@ -1,0 +1,21 @@
+{
+    "name": "elgg/community_theme",
+    "description": "Elgg community theme",
+    "type": "elgg-plugin",
+    "keywords": [
+        "elgg",
+        "plugin"
+    ],
+    "homepage": "http://www.elgg.org/",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Core developers",
+            "homepage": "http://www.elgg.org/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "composer/installers": ">=1.0.8"
+    }
+}
