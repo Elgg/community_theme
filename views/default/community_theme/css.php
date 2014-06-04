@@ -88,7 +88,6 @@ body {
 	border: 1px solid silver;
 	margin-right: 30px;
 	padding: 5px 10px;
-	background: url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_spotlight_image.gif) no-repeat right center;
 }
 
 /* IE 6 fix */
@@ -234,10 +233,20 @@ body {
 		max-width: 100%;
         width: 100%;
     }
+	.elgg-module-community {
+		margin: 0 0 20px 0;
+	}
     .elgg-module-register {
         width: 100%;
 		margin-top: 20px;
     }
+	#top_left {
+		margin: 0 0 20px 0;
+	}
+	.elgg-col-1of4,
+	.elgg-col-3of4 {
+		width: 100%;
+	}
 	.elgg-menu-footer-meta,
 	.elgg-menu-footer-default {
 		padding: 0 20px;
