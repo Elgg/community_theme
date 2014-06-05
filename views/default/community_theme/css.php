@@ -9,6 +9,7 @@
  * Dark blue: #0054A7
  * Lighter dark blue: #4690D6
  * Light header blue: #00b1f7
+ * Light soft blue: #546A7A
  * 
  */
 ?>
@@ -154,11 +155,11 @@ body {
 	padding: 20px 0 0;
 }
 .elgg-page-default .elgg-page-footer {
-	color: #415561;
+	color: #546A7A;
 	background-color: #161C20;
 }
 .elgg-page-default .elgg-page-footer a {
-	color: #415561;
+	color: #546A7A;
 }
 .elgg-page-default .elgg-page-footer > .elgg-inner {
 	max-width: 1030px;
@@ -167,11 +168,11 @@ body {
 	border: none;
 }
 .elgg-page-default .elgg-page-footer h2 {
-	color: #415561;
+	color: #546A7A;
 	padding-bottom: 12px;
 	margin-bottom: 12px;
 	font-weight: normal;
-	border-bottom: 1px solid #374751;
+	border-bottom: 1px solid #546A7A;
 }
 .elgg-page-footer .elgg-module {
 	margin: 20px;
@@ -181,7 +182,7 @@ body {
 	list-style: disc outside none;
 }
 .elgg-menu-footer > li:before {
-	color: #415561;
+	color: #546A7A;
 }
 .elgg-menu-footer-default {
 	padding-right: 20px;
