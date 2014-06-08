@@ -13,6 +13,7 @@ return array(
 	
 	'community_theme:contact'		=> 'info at elgg dot org',
 	'community_theme:copyright'		=> '&copy;2013 the Elgg Foundation',
+	'community_theme:description'	=> 'Welcome to the community, set up for users of Elgg to support each other.',
 	'community_theme:policy'		=> 'Domain policy',
 	'community_theme:title:contact'	=> 'Contact',
 	'community_theme:title:legal'	=> 'Legal',

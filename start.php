@@ -7,6 +7,9 @@
 elgg_register_event_handler('init', 'system', 'community_theme_init');
 
 function community_theme_init() {
+	
+	elgg_register_event_handler('pagesetup', 'system', 'community_theme_pagesetup', 1000);
+	
 	elgg_extend_view('css/elgg', 'community_theme/css');
 
 	elgg_register_plugin_hook_handler('head', 'page', 'community_theme_setup_head');	
@@ -15,41 +18,9 @@ function community_theme_init() {
 	elgg_unregister_menu_item('site', 'bookmarks');
 	elgg_unregister_menu_item('site', 'members');
 	elgg_unregister_menu_item('site', 'pages');
-
-	// Extend footer with report content link
-	if (elgg_is_logged_in()) {
-		elgg_unregister_menu_item('footer', 'report_this');
-		
-		$href = "javascript:elgg.forward('reportedcontent/add'";
-		$href .= "+'?address='+encodeURIComponent(location.href)";
-		$href .= "+'&title='+encodeURIComponent(document.title));";
-		
-		elgg_register_menu_item('extras', array(
-			'name' => 'report_this',
-			'href' => $href,
-			'title' => elgg_echo('reportedcontent:this:tooltip'),
-			'text' => elgg_view_icon('report-this'),
-		));
-	}
 	
-	// footer navigation
-	$items = array(
-		'home' => array('Home', 'elgg.org'),
-		'community' => array('Community', 'community.elgg.org'),
-		'blog' => array('Blog', 'blog.elgg.org'),
-		'hosting' => array('Hosting', 'elgg.org/hosting.php'),
-		'services' => array('Services', 'elgg.org/services.php'),
-		'docs' => array('Docs', 'docs.elgg.org'),
-	);
-
 	//remove "Powered by Elgg" link
 	elgg_unregister_menu_item('footer', 'powered');
-
-	foreach ($items as $id => $info) {
-		list($text, $href) = $info;
-		$item = new ElggMenuItem($id, $text, $href);
-		elgg_register_menu_item('footer_navigation', $item);
-	}
 }
 
 /**
@@ -77,6 +48,48 @@ function community_theme_setup_head($hook, $type, $data) {
 	);
 
 	return $data;
+}
+
+/**
+ * Setup menu items
+ */
+function community_theme_pagesetup() {
+
+	if (elgg_get_context() == 'community'){
+		elgg_extend_view('page/elements/body', 'page/elements/featured', 1);
+	}
+	
+	// Extend footer with report content link
+	if (elgg_is_logged_in()) {
+		elgg_unregister_menu_item('footer', 'report_this');
+		
+		$href = "javascript:elgg.forward('reportedcontent/add'";
+		$href .= "+'?address='+encodeURIComponent(location.href)";
+		$href .= "+'&title='+encodeURIComponent(document.title));";
+		
+		elgg_register_menu_item('extras', array(
+			'name' => 'report_this',
+			'href' => $href,
+			'title' => elgg_echo('reportedcontent:this:tooltip'),
+			'text' => elgg_view_icon('report-this'),
+		));
+	}
+	
+	// footer navigation
+	$items = array(
+		'home' => array('Home', 'elgg.org'),
+		'community' => array('Community', 'community.elgg.org'),
+		'blog' => array('Blog', 'blog.elgg.org'),
+		'hosting' => array('Hosting', 'elgg.org/hosting.php'),
+		'services' => array('Services', 'elgg.org/services.php'),
+		'docs' => array('Docs', 'docs.elgg.org'),
+	);
+
+	foreach ($items as $id => $info) {
+		list($text, $href) = $info;
+		$item = new ElggMenuItem($id, $text, $href);
+		elgg_register_menu_item('footer_navigation', $item);
+	}	
 }
 
 /**

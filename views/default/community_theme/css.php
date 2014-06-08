@@ -16,18 +16,27 @@ $gfx = elgg_normalize_url('mod/community_theme/graphics/');
 ?>
 /* <style> /**/
 
-/*****
-Common
-*****/
+/* ***************************************
+	Common
+*************************************** */
 body {
 	background-color: #161C20;
 }
-
 .elgg-page-body {
 	background-color: white;
 }
-.elgg-page-footer {
+.elgg-page-footer,
+.community-landing-page .elgg-page-body {
 	padding: 0;
+}
+.community-landing-page .elgg-page-body > .elgg-inner {
+	max-width: 100%;
+	width: 100%;
+}
+.community-landing-page .elgg-grid {
+	max-width: 1030px;
+	margin: 0 auto;	
+	padding: 30px 0;
 }
 .elgg-page-default .elgg-page-header > .elgg-inner {
 	height: 70px;
@@ -36,8 +45,64 @@ body {
 	padding-top: 0; <?php /* Aalborg theme adds 10px padding for narrow view */ ?>
 }
 /* ***************************************
+	Featured module
+*************************************** */
+.elgg-featured-container, .elgg-featured {	
+	position: relative;
+	zoom: 1;		
+}
+.elgg-featured-container {
+	margin: 0;
+	max-height: 550px;
+	overflow: hidden;
+	background: #FFF;	
+}
+.elgg-featured-container .featured-image {
+	height: 550px;
+}
+.featured-image {
+    background: url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/featured.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+    display: block;
+    position: relative;
+    width: 100%;
+	height: 550px;
+}
+.elgg-caption {
+	padding: 0 20px;	
+	height: 550px;
+}
+.elgg-caption .elgg-inner {
+	text-align: center;
+	width: 600px;
+	margin: 0 auto;
+	position: relative;
+	top: 40%;
+}
+.elgg-caption h1 {
+	color: #F7F1E9;
+	font-size: 3.6em;
+	font-weight: normal;
+	padding-bottom: 30px;
+}
+.elgg-caption h1 span {
+	font-weight: bold;
+}
+.elgg-caption h2 {
+	color: #FFF;
+	font-weight: normal;
+	font-size: 2.0em;
+}
+
+/* ***************************************
 	Footer
 *************************************** */
+.elgg-page-footer .elgg-grid {
+	padding: 20px 0 0;
+}
 .elgg-page-default .elgg-page-footer {
 	color: #415561;
 	background-color: #161C20;
@@ -48,8 +113,8 @@ body {
 .elgg-page-default .elgg-page-footer > .elgg-inner {
 	max-width: 1030px;
 	margin: 0 auto;	
-	padding: 30px 0 0;
-	border: 0;
+	padding: 0;
+	border: none;
 }
 .elgg-page-default .elgg-page-footer h2 {
 	color: #415561;
@@ -59,7 +124,7 @@ body {
 	border-bottom: 1px solid #374751;
 }
 .elgg-page-footer .elgg-module {
-	margin: 10px 20px 20px;
+	margin: 20px;
 }
 .elgg-menu-footer-navigation {
 	padding-left: 15px;
@@ -75,75 +140,6 @@ body {
 	padding-left: 20px;
 }
 
-/*
-@todo The top_left stuff needs cleaned up.
-*/
-
-#top_left {
-	position: relative;
-	min-height: 240px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	border: 1px solid silver;
-	margin-right: 30px;
-	padding: 5px 10px;
-}
-
-/* IE 6 fix */
-* html #top_left {
-	height: 240px;
-}
-/* IE 7 fix */
-*:first-child+html #top_left {
-	height: 240px;
-}
-
-#top_left h1 {
-	color:#666666;
-	font-family:Arial,sans-serif;
-	font-size:2.8em;
-	font-weight:normal;
-	line-height: 1.4em;
-}
-
-#top_left h1 span {
-	font-weight:bold;
-}
-
-#top_left h2 {
-	color:#999999;
-	font-weight:normal;
-	font-size:1.8em;
-}
-
-
-#top_right .homepage_stats h2 {
-	color:#0054A7;
-	margin-bottom:15px;
-}
-#top_right .homepage_stats {
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border:1px solid silver;
-	padding:5px 10px;
-	min-height: 240px;
-	background: #FDFFC3;
-}
-
-#top_left .homepage_join_link {
-	display:block;
-	position: absolute;
-	bottom: 10px;
-	left: 10px;
-	width: 213px;
-	height: 37px;
-	background: url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_join.gif) no-repeat left top;
-}
-#top_left .homepage_join_link:hover {
-	background: url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_join_over.gif) no-repeat left top;
-}
-
 .elgg-module-community {
 	border:1px solid silver;
 	-moz-border-radius: 8px;
@@ -156,7 +152,7 @@ body {
 
 .elgg-module-community-plugins {
 	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_plugins.gif) no-repeat bottom center;
-	margin-left: 0;
+	margin-left: 20px;
 }
 
 .elgg-module-community-discussion {
@@ -165,7 +161,7 @@ body {
 
 .elgg-module-community-more {
 	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_box.gif) no-repeat bottom center;
-	margin-right: 0;
+	margin-right: 20px;
 }
 
 .elgg-module-community-more ul {
@@ -228,21 +224,30 @@ body {
 /* ***************************************
 	Responsive
 *************************************** */
+@media (max-width: 1030px) {
+	.elgg-featured-container {
+		max-height: 450px;
+	}
+	.elgg-caption,
+	.elgg-featured-container .featured-image {
+		height: 450px;
+	}
+}
 @media (max-width: 820px) {
+	.community-landing-page .elgg-grid {
+		padding: 30px 0 10px;
+	}
 	.elgg-form-account {
 		max-width: 100%;
         width: 100%;
     }
 	.elgg-module-community {
-		margin: 0 0 20px 0;
+		margin: 0 20px 20px;
 	}
     .elgg-module-register {
         width: 100%;
 		margin-top: 20px;
     }
-	#top_left {
-		margin: 0 0 20px 0;
-	}
 	.elgg-col-1of4,
 	.elgg-col-3of4 {
 		width: 100%;
@@ -250,5 +255,24 @@ body {
 	.elgg-menu-footer-meta,
 	.elgg-menu-footer-default {
 		padding: 0 20px;
+	}
+}
+@media (max-width: 766px) {
+	.elgg-featured-container {
+		max-height: 350px;
+	}
+	.elgg-caption,
+	.elgg-featured-container .featured-image {
+		height: 350px;
+	}
+	.elgg-caption .elgg-inner {
+		width: auto;
+	}
+	.elgg-caption h1 {
+		font-size: 2.8em;
+		padding-bottom: 24px;
+	}
+	.elgg-caption h2 {
+		font-size: 1.6em;
 	}
 }
