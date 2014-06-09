@@ -89,7 +89,14 @@ function community_theme_pagesetup() {
 		list($text, $href) = $info;
 		$item = new ElggMenuItem($id, $text, $href);
 		elgg_register_menu_item('footer_navigation', $item);
-	}	
+	}
+	
+	elgg_register_menu_item('footer', array(
+		'name' => 'policy',
+		'href' => "http://elgg.org/domain.php",
+		'text' => elgg_echo('community_theme:policy'),
+		'section' => 'default',
+	));	
 }
 
 /**

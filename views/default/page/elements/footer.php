@@ -31,7 +31,6 @@ $nav = elgg_view_menu('footer_navigation', array(
 			<h2><?php echo elgg_echo('community_theme:title:legal'); ?></h2>
 			<p><?php echo elgg_echo('community_theme:copyright'); ?></p>
 			<p><?php echo elgg_echo('community_theme:trademark'); ?></p>
-			<p><a href="http://elgg.org/domain.php"><?php echo elgg_echo('community_theme:policy'); ?></a>.</p>
 		</div>		
 	</div>
 </div>
