@@ -77,12 +77,13 @@ function community_theme_pagesetup() {
 	
 	// footer navigation
 	$items = array(
-		'home' => array('Home', 'elgg.org'),
-		'community' => array('Community', 'community.elgg.org'),
-		'blog' => array('Blog', 'blog.elgg.org'),
-		'hosting' => array('Hosting', 'elgg.org/hosting.php'),
-		'services' => array('Services', 'elgg.org/services.php'),
-		'docs' => array('Docs', 'docs.elgg.org'),
+		'home' => array(elgg_echo('community_theme:home'), 'elgg.org'),
+		'community' => array(elgg_echo('community_theme:community'), 'community.elgg.org'),
+		'blog' => array(elgg_echo('community_theme:blog'), 'blog.elgg.org'),
+		'hosting' => array(elgg_echo('community_theme:hosting'), 'elgg.org/hosting.php'),
+		'services' => array(elgg_echo('community_theme:services'), 'elgg.org/services.php'),
+		'docs' => array(elgg_echo('community_theme:learn'), 'learn.elgg.org/'),
+		'download' => array(elgg_echo('community_theme:download'), 'elgg.org/download.php'),
 	);
 
 	foreach ($items as $id => $info) {
