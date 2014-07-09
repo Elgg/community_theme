@@ -17,13 +17,13 @@ $num_plugins = floor($num_plugins / 100) * 100;
 $content = elgg_echo('community_theme:plugins', array($num_plugins));
 
 $content .= elgg_view('output/url', array(
-	'class' => 'homepage-more-link',
+	'class' => 'elgg-button',
 	'href' => '/plugins/category/themes', 
 	'text' => elgg_echo('community_theme:themes:link'), 
 ));
 
 $content .= elgg_view('output/url', array(
-	'class' => 'homepage-more-link',
+	'class' => 'elgg-button',
 	'href' => '/plugins', 
 	'text' => elgg_echo('community_theme:plugins:link'),
 ));
