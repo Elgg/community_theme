@@ -42,6 +42,10 @@ body {
 .elgg-page-header > .elgg-inner h1 {
 	padding-top: 0; <?php /* Aalborg theme adds 10px padding for narrow view */ ?>
 }
+.elgg-form-account {
+	float: left;
+	width: 50%;
+}
 /* ***************************************
 	Featured module
 *************************************** */
@@ -120,32 +124,27 @@ body {
 .elgg-module-community li:last-child {
 	padding-bottom: 0;
 }
+.elgg-module-register {
+	float: right;
+	width: 45%;
+	margin-top: 10px;
+}
+.elgg-module-register .elgg-head {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
 /* ***************************************
 	Buttons
 *************************************** */
-.homepage-reg-link {	
-	margin: 15px auto 0;
-	width: 300px;
-}
-.homepage-more-link {
-	margin: 20px 0 0;	
-}
-.homepage-reg-link,
-.homepage-login-link,
-.homepage-more-link {
+.elgg-module-community .elgg-button {
 	display: block;	
 	text-align: center;
-	color: #FFFFFF;
 	font-size: 24px;
 	background: #60B8F7;
-	border-radius: 3px;
 	padding: 15px 0;
+	margin: 20px 0 0;
 }
-.homepage-reg-link:hover,
-.homepage-login-link:hover,
-.homepage-more-link:hover {
-	color: #FFFFFF;
-	text-decoration: none;
+.elgg-module-community .elgg-button:hover {
 	background: #74C5F4;
 }
 /* ***************************************
