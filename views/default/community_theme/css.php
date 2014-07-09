@@ -11,8 +11,6 @@
  * Light header blue: #00b1f7
  * 
  */
-
-$gfx = elgg_normalize_url('mod/community_theme/graphics/');
 ?>
 /* <style> /**/
 
@@ -23,7 +21,7 @@ body {
 	background-color: #161C20;
 }
 .elgg-page-body {
-	background-color: white;
+	background-color: #FFFFFF;
 }
 .elgg-page-footer,
 .community-landing-page .elgg-page-body {
@@ -96,7 +94,60 @@ body {
 	font-weight: normal;
 	font-size: 2.0em;
 }
-
+/* ***************************************
+	Modules
+*************************************** */
+.elgg-module-community {
+	margin: 20px;
+	position: relative;
+}
+.elgg-module-community .elgg-head {
+	padding-bottom: 10px;
+}
+.elgg-module-community h3 {
+	font-size: 24px;
+	color: #222222;
+}
+.elgg-module-community ul {
+	margin:0;
+	padding: 10px 0 0;
+	list-style: none;
+}
+.elgg-module-community li {
+	padding: 0 0 20px 0;
+	margin-top: 10px;
+}
+.elgg-module-community li:last-child {
+	padding-bottom: 0;
+}
+/* ***************************************
+	Buttons
+*************************************** */
+.homepage-reg-link {	
+	margin: 15px auto 0;
+	width: 300px;
+}
+.homepage-more-link {
+	margin: 20px 0 0;	
+}
+.homepage-reg-link,
+.homepage-login-link,
+.homepage-more-link {
+	display: block;	
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 24px;
+	background: #60B8F7;
+	border-radius: 3px;
+	padding: 15px 0;
+}
+.homepage-reg-link:hover,
+.homepage-login-link:hover,
+.homepage-more-link:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #74C5F4;
+}
 /* ***************************************
 	Footer
 *************************************** */
@@ -139,88 +190,6 @@ body {
 .elgg-menu-footer-meta {
 	padding-left: 20px;
 }
-
-.elgg-module-community {
-	border:1px solid silver;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	margin: 0 10px;
-	padding: 10px;
-	height: 280px;
-	position: relative;
-}
-
-.elgg-module-community-plugins {
-	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_plugins.gif) no-repeat bottom center;
-	margin-left: 20px;
-}
-
-.elgg-module-community-discussion {
-	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_groups.gif) no-repeat bottom center;
-}
-
-.elgg-module-community-more {
-	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_box.gif) no-repeat bottom center;
-	margin-right: 20px;
-}
-
-.elgg-module-community-more ul {
-	margin:0;
-	padding:0;
-	list-style: none;
-}
-
-.elgg-module-community-more li {
-	padding:0px 0 10px 55px;
-	margin:0;
-}
-.elgg-module-community-more .bug_tracker {
-	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_bullet_bug_tracker.gif) no-repeat left top;
-}
-.elgg-module-community-more .mailing_list {
-	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_bullet_mailing_list.gif) no-repeat left top;
-}
-.elgg-module-community-more .api_reference {
-	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_bullet_api_reference.gif) no-repeat left top;
-}
-.elgg-module-community-more .chat {
-	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_bullet_chat.gif) no-repeat left top;
-}
-
-.homepage_more_link {
-	display: block;
-	position: absolute;
-	overflow: hidden;
-	bottom: 10px;
-	right: 10px;
-	width: 68px;
-	height: 22px;
-	text-indent: 9999em;
-	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_more.gif) no-repeat left top;
-}
-
-.homepage_more_link:hover {
-	background:url(<?php echo elgg_get_site_url(); ?>mod/community_theme/graphics/homepage_more_over.gif) no-repeat left top;
-}
-
-#openid_login #login-boxs form {
-	background: none;
-	margin:0;
-	padding:5px 0 4px 0;
-}
-
-.elgg-form-account {
-	float: left;
-	width: 50%;
-}
-.elgg-module-register {
-	float: right;
-	width: 45%;
-}
-.elgg-module-register .elgg-head {
-	margin-bottom: 5px;
-	padding-bottom: 5px;
-}
 /* ***************************************
 	Responsive
 *************************************** */
@@ -235,23 +204,29 @@ body {
 }
 @media (max-width: 820px) {
 	.community-landing-page .elgg-grid {
-		padding: 30px 0 10px;
+		padding: 20px 0;
+	}
+	.elgg-grid .first {
+		padding: 0 0 20px 0;
+	}
+	.elgg-grid .middle {
+		background-color: #F5F5F5;
+		padding: 20px 0;
+	}
+	.elgg-grid .last {
+		padding: 20px 0 0;
 	}
 	.elgg-form-account {
 		max-width: 100%;
         width: 100%;
     }
 	.elgg-module-community {
-		margin: 0 20px 20px;
+		margin: 20px;
 	}
     .elgg-module-register {
         width: 100%;
 		margin-top: 20px;
     }
-	.elgg-col-1of4,
-	.elgg-col-3of4 {
-		width: 100%;
-	}
 	.elgg-menu-footer-meta,
 	.elgg-menu-footer-default {
 		padding: 0 20px;
