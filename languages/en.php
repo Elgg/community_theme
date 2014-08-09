@@ -13,7 +13,7 @@ return array(
 	
 	'community_theme:blog'			=> 'Blog',
 	'community_theme:community'		=> 'Community',
-	'community_theme:contact'		=> 'info at elgg dot org',
+	'community_theme:contact'		=> 'info@elgg.org',
 	'community_theme:copyright'		=> '&copy;2014 the Elgg Foundation',
 	'community_theme:description'	=> 'A place for Elgg users to support each other',
 	'community_theme:help'			=> 'Anything not addressed by <a href="http://learn.elgg.org/en/1.x/">the official documentation</a> can be answered by our %s-member community. Search first, but don\'t hesitate to also <a href="https://community.elgg.org/discussion/new">ask your own question</a> if you don\'t find the answer quickly.',
@@ -25,6 +25,7 @@ return array(
 	'community_theme:plugins'		=> 'There are more than <a href="https://community.elgg.org/plugins">%s themes and plugins</a> available to customize your Elgg site. Everything here is free, contributed by other members of the Elgg community.',
 	'community_theme:plugins:link'	=> 'Find plugins',
 	'community_theme:policy'		=> 'Domain policy',
+	'community_theme:security'		=> 'Security issues should be reported to security@elgg.org!',
 	'community_theme:services'		=> 'Services',
 	'community_theme:showcase'		=> 'We currently feature %s of the highest quality sites powered by Elgg to help you see what\'s possible and get inspiration for your own site. You can even <a href="https://community.elgg.org/showcase/add">show off your own Elgg site</a> in the showcase too!',
 	'community_theme:showcase:link'	=> 'Browse the showcase',
