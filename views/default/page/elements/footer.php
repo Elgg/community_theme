@@ -23,6 +23,7 @@ $nav = elgg_view_menu('footer_navigation', array(
 		<div class="elgg-module">
 			<h2><?php echo elgg_echo('community_theme:title:contact'); ?></h2>
 			<p><?php echo elgg_echo('community_theme:contact'); ?></p>
+			<p><?php echo elgg_echo('community_theme:security'); ?></p>
 		</div>
 	</div>
 	
