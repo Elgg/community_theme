@@ -21,6 +21,8 @@ function community_theme_init() {
 
 	//remove "Powered by Elgg" link
 	elgg_unregister_menu_item('footer', 'powered');
+
+	elgg_unregister_plugin_hook_handler('prepare', 'menu:site', '_elgg_site_menu_setup');
 }
 
 /**
