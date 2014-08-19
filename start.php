@@ -1,24 +1,24 @@
 <?php
 /**
  * Elgg Community Theme
- * 
+ *
  */
-     
+
 elgg_register_event_handler('init', 'system', 'community_theme_init');
 
 function community_theme_init() {
-	
+
 	elgg_register_event_handler('pagesetup', 'system', 'community_theme_pagesetup', 1000);
-	
+
 	elgg_extend_view('css/elgg', 'community_theme/css');
 
-	elgg_register_plugin_hook_handler('head', 'page', 'community_theme_setup_head');	
+	elgg_register_plugin_hook_handler('head', 'page', 'community_theme_setup_head');
 	elgg_register_page_handler('', 'community_theme_front_page');
-	
+
 	elgg_unregister_menu_item('site', 'bookmarks');
 	elgg_unregister_menu_item('site', 'members');
 	elgg_unregister_menu_item('site', 'pages');
-	
+
 	//remove "Powered by Elgg" link
 	elgg_unregister_menu_item('footer', 'powered');
 }
@@ -36,12 +36,12 @@ function community_theme_setup_head($hook, $type, $data) {
 		'http-equiv' => 'X-UA-Compatible',
 		'content' => 'IE=edge',
 	);
-	
+
 	$data['metas'][] = array(
 		'name' => 'viewport',
 		'content' => 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0',
 	);
-	
+
 	$data['links'][] = array(
 		'rel' => 'icon',
 		'href' => elgg_normalize_url('mod/community_theme/graphics/favicon.ico'),
@@ -54,21 +54,21 @@ function community_theme_setup_head($hook, $type, $data) {
  * Setup menu items
  */
 function community_theme_pagesetup() {
-	
+
 	elgg_extend_view('page/elements/sidebar', 'search/header', 0);
 
 	if (elgg_get_context() == 'community'){
 		elgg_extend_view('page/elements/body', 'page/elements/featured', 1);
 	}
-	
+
 	// Extend footer with report content link
 	if (elgg_is_logged_in()) {
 		elgg_unregister_menu_item('footer', 'report_this');
-		
+
 		$href = "javascript:elgg.forward('reportedcontent/add'";
 		$href .= "+'?address='+encodeURIComponent(location.href)";
 		$href .= "+'&title='+encodeURIComponent(document.title));";
-		
+
 		elgg_register_menu_item('extras', array(
 			'name' => 'report_this',
 			'href' => $href,
@@ -76,7 +76,7 @@ function community_theme_pagesetup() {
 			'text' => elgg_view_icon('report-this'),
 		));
 	}
-	
+
 	// footer navigation
 	$items = array(
 		'home' => array(elgg_echo('community_theme:home'), 'elgg.org'),
@@ -93,13 +93,13 @@ function community_theme_pagesetup() {
 		$item = new ElggMenuItem($id, $text, $href);
 		elgg_register_menu_item('footer_navigation', $item);
 	}
-	
+
 	elgg_register_menu_item('footer', array(
 		'name' => 'policy',
 		'href' => "http://elgg.org/domain.php",
 		'text' => elgg_echo('community_theme:policy'),
 		'section' => 'default',
-	));	
+	));
 }
 
 /**
