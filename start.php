@@ -57,8 +57,6 @@ function community_theme_setup_head($hook, $type, $data) {
  */
 function community_theme_pagesetup() {
 
-	elgg_extend_view('page/elements/sidebar', 'search/header', 0);
-
 	if (elgg_get_context() == 'community'){
 		elgg_extend_view('page/elements/body', 'page/elements/featured', 1);
 	}
