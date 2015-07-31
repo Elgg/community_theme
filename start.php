@@ -13,7 +13,6 @@ function community_theme_init() {
 	elgg_extend_view('css/elgg', 'community_theme/css');
 
 	elgg_register_plugin_hook_handler('head', 'page', 'community_theme_setup_head');
-	elgg_register_page_handler('', 'community_theme_front_page');
 
 	elgg_unregister_menu_item('site', 'bookmarks');
 	elgg_unregister_menu_item('site', 'members');
@@ -100,21 +99,4 @@ function community_theme_pagesetup() {
 		'text' => elgg_echo('community_theme:policy'),
 		'section' => 'default',
 	));
-}
-
-/**
- * Elgg community site front page handler
- *
- * @param string $hook
- * @param string $type
- * @param bool $return
- * @param array $params
- * @return bool
- */
-function community_theme_front_page() {
-	if (!include_once(dirname(__FILE__) . "/index.php")) {
-		return false;
-	}
-
-	return true;
 }
