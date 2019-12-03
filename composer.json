@@ -1,21 +1,8 @@
 {
-    "name": "elgg/community_theme",
-    "description": "Elgg community theme",
+    "name": "elgg/aalborg_theme",
     "type": "elgg-plugin",
-    "keywords": [
-        "elgg",
-        "plugin"
-    ],
-    "homepage": "http://www.elgg.org/",
-    "license": "GPL-2.0",
-    "authors": [
-        {
-            "name": "Core developers",
-            "homepage": "http://www.elgg.org/",
-            "role": "Developer"
-        }
-    ],
     "require": {
         "composer/installers": ">=1.0.8"
-    }
+    },
+    "license": "GPL-2.0-only"
 }

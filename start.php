@@ -1,27 +1,99 @@
 <?php
 /**
- * Elgg Community Theme
+ * Stard Admin theme plugin
  *
+ * @package StarAdminTheme
  */
 
-elgg_register_event_handler('init', 'system', 'community_theme_init');
+elgg_register_event_handler('init','system','star_admin_theme_init');
 
-function community_theme_init() {
+function star_admin_theme_init() {
 
-	elgg_register_event_handler('pagesetup', 'system', 'community_theme_pagesetup', 1000);
+	elgg_register_event_handler('pagesetup', 'system', 'star_admin_theme_pagesetup', 1000);
 
-	elgg_extend_view('css/elgg', 'community_theme/css');
+	// theme specific CSS
+	elgg_extend_view('elgg.css', 'star_admin_theme/css');
 
-	elgg_register_plugin_hook_handler('head', 'page', 'community_theme_setup_head');
+	elgg_unextend_view('page/elements/header', 'search/header');
+	elgg_extend_view('page/elements/sidebar', 'search/header', 0);
+	
+	elgg_register_plugin_hook_handler('head', 'page', 'star_admin_theme_setup_head');
 
-	elgg_unregister_menu_item('site', 'bookmarks');
-	elgg_unregister_menu_item('site', 'members');
-	elgg_unregister_menu_item('site', 'pages');
+	// non-members do not get visible links to RSS feeds
+	if (!elgg_is_logged_in()) {
+		elgg_unregister_plugin_hook_handler('output:before', 'layout', 'elgg_views_add_rss_link');
+	}
+        
+        elgg_register_plugin_hook_handler('index','system','star_admin_index');
 
-	//remove "Powered by Elgg" link
-	elgg_unregister_menu_item('footer', 'powered');
 
-	elgg_unregister_plugin_hook_handler('prepare', 'menu:site', '_elgg_site_menu_setup');
+}
+
+/**
+ * Rearrange menu items
+ */
+function star_admin_theme_pagesetup() {
+
+	if (elgg_is_logged_in()) {
+
+		elgg_register_menu_item('topbar', array(
+			'name' => 'account',
+			'text' => elgg_echo('account'),
+			'href' => "#",
+			'priority' => 100,
+			'section' => 'alt',
+			'link_class' => 'elgg-topbar-dropdown',
+		));
+
+		if (elgg_is_active_plugin('dashboard')) {
+			$item = elgg_unregister_menu_item('topbar', 'dashboard');
+			if ($item) {
+				$item->setText(elgg_echo('dashboard'));
+				$item->setSection('default');
+				elgg_register_menu_item('site', $item);
+			}
+		}
+		
+		$item = elgg_get_menu_item('topbar', 'usersettings');
+		if ($item) {
+			$item->setParentName('account');
+			$item->setText(elgg_echo('settings'));
+			$item->setPriority(103);
+		}
+
+		$item = elgg_get_menu_item('topbar', 'logout');
+		if ($item) {
+			$item->setParentName('account');
+			$item->setText(elgg_echo('logout'));
+			$item->setPriority(104);
+		}
+
+		$item = elgg_get_menu_item('topbar', 'administration');
+		if ($item) {
+			$item->setParentName('account');
+			$item->setText(elgg_echo('admin'));
+			$item->setPriority(101);
+		}
+
+		if (elgg_is_active_plugin('site_notifications')) {
+			$item = elgg_get_menu_item('topbar', 'site_notifications');
+			if ($item) {
+				$item->setParentName('account');
+				$item->setText(elgg_echo('site_notifications:topbar'));
+				$item->setPriority(102);
+			}
+		}
+
+		if (elgg_is_active_plugin('reportedcontent')) {
+			$item = elgg_unregister_menu_item('footer', 'report_this');
+			if ($item) {
+				$item->setText(elgg_view_icon('report-this'));
+				$item->setPriority(500);
+				$item->setSection('default');
+				elgg_register_menu_item('extras', $item);
+			}
+		}
+	}
 }
 
 /**
@@ -32,71 +104,25 @@ function community_theme_init() {
  * @param array  $data Array of items for head
  * @return array
  */
-function community_theme_setup_head($hook, $type, $data) {
-	$data['metas'][] = array(
-		'http-equiv' => 'X-UA-Compatible',
-		'content' => 'IE=edge',
-	);
-
-	$data['metas'][] = array(
+function star_admin_theme_setup_head($hook, $type, $data) {
+	$data['metas']['viewport'] = array(
 		'name' => 'viewport',
 		'content' => 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0',
 	);
 
-	$data['links'][] = array(
-		'rel' => 'icon',
-		'href' => elgg_normalize_url('mod/community_theme/graphics/favicon.ico'),
+	$data['links']['apple-touch-icon'] = array(
+		'rel' => 'apple-touch-icon',
+		'href' => elgg_get_simplecache_url('star_admin_theme/homescreen.png'),
 	);
 
 	return $data;
 }
+ 
 
-/**
- * Setup menu items
- */
-function community_theme_pagesetup() {
 
-	if (elgg_get_context() == 'community'){
-		elgg_extend_view('page/elements/body', 'page/elements/featured', 1);
-	}
-
-	// Extend footer with report content link
-	if (elgg_is_logged_in()) {
-		elgg_unregister_menu_item('footer', 'report_this');
-
-		$href = "javascript:elgg.forward('reportedcontent/add'";
-		$href .= "+'?address='+encodeURIComponent(location.href)";
-		$href .= "+'&title='+encodeURIComponent(document.title));";
-
-		elgg_register_menu_item('extras', array(
-			'name' => 'report_this',
-			'href' => $href,
-			'title' => elgg_echo('reportedcontent:this:tooltip'),
-			'text' => elgg_view_icon('report-this'),
-		));
-	}
-
-	// footer navigation
-	$items = array(
-		'home' => array(elgg_echo('community_theme:home'), 'elgg.org'),
-		'community' => array(elgg_echo('community_theme:community'), 'community.elgg.org'),
-		'blog' => array(elgg_echo('community_theme:blog'), 'blog.elgg.org'),
-		'hosting' => array(elgg_echo('community_theme:hosting'), 'elgg.org/hosting.php'),
-		'services' => array(elgg_echo('community_theme:services'), 'elgg.org/services.php'),
-		'docs' => array(elgg_echo('community_theme:learn'), 'learn.elgg.org/'),
-		'download' => array(elgg_echo('community_theme:download'), 'elgg.org/download.php'),
-	);
-
-	foreach ($items as $id => $info) {
-		list($text, $href) = $info;
-		$item = new ElggMenuItem($id, $text, $href);
-		elgg_register_menu_item('footer_navigation', $item);
-	}
-
-	elgg_register_menu_item('footer', array(
-		'name' => 'policy',
-		'href' => "http://elgg.org/domain.php",
-		'text' => elgg_echo('community_theme:policy'),
-		'section' => 'default',
-	));
+function star_admin_index() {
+    if (!include_once(dirname(dirname(__FILE__)) . "/star-admin-theme/views/default/custom_index/star_landing_home.php"))
+        return false;
+ 
+    return true;
 }
